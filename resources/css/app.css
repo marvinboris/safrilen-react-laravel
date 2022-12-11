@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+
+@import './frontend/ui';
+@import './frontend/home';
+@import './frontend/success';
+
+@import './components/buttons';
+
+@tailwind utilities;
