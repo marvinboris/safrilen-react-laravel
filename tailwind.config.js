@@ -6,9 +6,9 @@ const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenCo
 module.exports = {
     content: [
         "./node_modules/flowbite-react/**/*.js",
-        "./resources/js/src/pages/**/*.{js,ts,jsx,tsx}",
-        "./resources/js/src/components/**/*.{js,ts,jsx,tsx}",
-        "./resources/js/src/features/**/*.{js,ts,jsx,tsx}",
+        "./resources/ts/src/pages/**/*.{js,ts,jsx,tsx}",
+        "./resources/ts/src/components/**/*.{js,ts,jsx,tsx}",
+        "./resources/ts/src/features/**/*.{js,ts,jsx,tsx}",
     ],
     darkMode: 'class', // or 'class'
     theme: {

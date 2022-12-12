@@ -5,7 +5,6 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\UtilController;
 use App\Models\Publication;
-use App\Models\PublicationCategory;
 use App\Models\Subscriber;
 use App\Notifications\Newsletter;
 use Illuminate\Http\Request;
@@ -42,7 +41,6 @@ class PublicationController extends Controller
             //     $join->on('admins.id', 'publications.author_id');
             //     $join->where('publications.author_type', '=', Admin::class);
             // })
-            ->join('publication_categories', 'publication_categories.id', '=', 'publications.publication_category_id')
             ->select('publications.*')
             ->when($search, function ($query, $search) {
                 if ($search !== "")
@@ -62,7 +60,6 @@ class PublicationController extends Controller
 
         foreach ($filteredData as $publication) {
             $publications[] = array_merge($publication->toArray(), [
-                'publication_category' => $publication->publication_category->name,
                 'author' => $publication->author->name,
             ]);
         }
@@ -75,11 +72,7 @@ class PublicationController extends Controller
 
     private function information()
     {
-        $publication_categories = PublicationCategory::all();
-
-        return [
-            'publication_categories' => $publication_categories,
-        ];
+        return [];
     }
 
 

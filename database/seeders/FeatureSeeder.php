@@ -41,6 +41,10 @@ class FeatureSeeder extends Seeder
                 'prefix' => 'publications',
             ],
             [
+                'name' => "Products",
+                'prefix' => 'products',
+            ],
+            [
                 'name' => "Subscribers",
                 'prefix' => 'subscribers',
             ],
@@ -49,8 +53,8 @@ class FeatureSeeder extends Seeder
                 'prefix' => 'services',
             ],
             [
-                'name' => "Testimonies",
-                'prefix' => 'testimonies',
+                'name' => "Testimonials",
+                'prefix' => 'testimonials',
             ],
         ];
 

@@ -67,8 +67,9 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
                 Route::get('{user}', 'UserController@show')->name('show');
             });
 
-            Route::prefix('publication-categories')->name('publication_categories.')->group(function () {
-                Route::get('{publication_category}', 'PublicationCategoryController@show')->name('show');
+            Route::prefix('products')->name('products.')->group(function () {
+                Route::get('info', 'ProductController@info')->name('info');
+                Route::get('{product}', 'ProductController@show')->name('show');
             });
 
             Route::prefix('publications')->name('publications.')->group(function () {
@@ -84,16 +85,8 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
                 Route::get('{service}', 'ServiceController@show')->name('show');
             });
 
-            Route::prefix('testimonies')->name('testimonies.')->group(function () {
-                Route::get('{testimony}', 'TestimonyController@show')->name('show');
-            });
-
-            Route::prefix('team-members')->name('team_members.')->group(function () {
-                Route::get('{team_member}', 'TeamMemberController@show')->name('show');
-            });
-
-            Route::prefix('partners')->name('partners.')->group(function () {
-                Route::get('{partner}', 'PartnerController@show')->name('show');
+            Route::prefix('testimonials')->name('testimonials.')->group(function () {
+                Route::get('{testimonial}', 'TestimonialController@show')->name('show');
             });
 
 
@@ -103,13 +96,11 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
                 'roles' => 'RoleController',
                 'features' => 'FeatureController',
                 'languages' => 'LanguageController',
-                'publication-categories' => 'PublicationCategoryController',
                 'publications' => 'PublicationController',
+                'products' => 'ProductController',
                 'subscribers' => 'SubscriberController',
                 'services' => 'ServiceController',
-                'testimonies' => 'TestimonyController',
-                'team-members' => 'TeamMemberController',
-                'partners' => 'PartnerController',
+                'testimonials' => 'TestimonialController',
             ]);
         });
     });

@@ -45,6 +45,7 @@ class ContactNotification extends Notification
         return (new MailMessage)
             ->greeting('Nouveau message de contact !')
             ->line($this->contact['name'] . ' (' . $this->contact['email'] . ') a envoyé le message :')
+            ->line($this->contact['subject'])
             ->line($this->contact['message'])
             ->line('Merci d\'utiliser notre application !');
     }

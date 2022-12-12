@@ -27,7 +27,7 @@ class UserSeeder extends Seeder
             ],
             [
                 'name' => 'Safrilen',
-                'email' => 'contact@safrilen.com',
+                'email' => env('COMPANY_EMAIL'),
                 'phone' => '237671717171',
                 'password' => Hash::make('12345'),
                 'role_id' => Role::first()->id,

@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             AdminSeeder::class,
             UserSeeder::class,
             ServiceSeeder::class,
-            TestimonySeeder::class,
+            TestimonialSeeder::class,
             ImageSeeder::class,
             PublicationSeeder::class,
             ProductSeeder::class,

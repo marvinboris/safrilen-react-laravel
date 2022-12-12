@@ -494,7 +494,7 @@
                             "title": "Titre",
                             "body": "Contenu",
                             "photo": "Photo",
-                            "testimony_photo": "Photo du témoignage",
+                            "testimonial_photo": "Photo du témoignage",
                             "is_active": "Statut",
                             "select_status": "S\u00e9lectionner le statut",
                             "created_at": "Cr\u00e9\u00e9 le"
@@ -1209,7 +1209,7 @@
                             "title": "Titre",
                             "body": "Contenu",
                             "photo": "Photo",
-                            "testimony_photo": "Photo du témoignage",
+                            "testimonial_photo": "Photo du témoignage",
                             "is_active": "Statut",
                             "select_status": "S\u00e9lectionner le statut",
                             "created_at": "Cr\u00e9\u00e9 le"

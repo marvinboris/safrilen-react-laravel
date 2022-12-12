@@ -7,7 +7,7 @@ use App\Models\Product;
 use App\Models\Publication;
 use App\Models\Service;
 use App\Models\Subscriber;
-use App\Models\Testimony;
+use App\Models\Testimonial;
 use App\Models\User;
 use App\Notifications\ContactNotification;
 use App\Notifications\QuoteNotification;
@@ -19,7 +19,7 @@ class FrontendController extends Controller
     public function home()
     {
         $images = Image::take(12)->get();
-        $testimonials = Testimony::orderBy('id', 'DESC')->whereIsActive(1)->take(3)->get();
+        $testimonials = Testimonial::orderBy('id', 'DESC')->whereIsActive(1)->take(3)->get();
         $publications = [];
         foreach (Publication::orderBy('id', 'DESC')->whereIsActive(1)->take(3)->get() as $publication) {
             $publications[] = array_merge($publication->toArray(), [
@@ -51,23 +51,18 @@ class FrontendController extends Controller
     public function quote(Request $request)
     {
         $request->validate([
-            'services' => 'required|array|exists:services,id',
+            'service' => 'required|exists:services,id',
             'first_name' => 'required|string',
             'last_name' => 'required|string',
             'email' => 'required|email',
             'phone' => 'required|string',
-            'location' => 'required|string',
             'address' => 'required|string',
-            'message' => 'required|string',
+            'date' => 'required|date',
+            'comment' => 'required|string',
         ]);
 
-        $services = [];
-        foreach ($request->services as $service_id) {
-            $services[] = Service::find($service_id)->title[env('MIX_DEFAULT_LANG', 'fr')];
-        }
-
-        Notification::send(User::whereEmail('contact@safrilen.com')->first(), new QuoteNotification($request->except('services') + [
-            'services' => $services,
+        Notification::send(User::whereEmail(env('COMPANY_EMAIL'))->first(), new QuoteNotification($request->except('service') + [
+            'service' => Service::find($request->service)->title[env('MIX_DEFAULT_LANG', 'fr')],
         ]));
 
         return response()->json([
@@ -80,10 +75,11 @@ class FrontendController extends Controller
         $request->validate([
             'name' => 'nullable|string',
             'email' => 'nullable|email',
+            'subject' => 'required|string',
             'message' => 'required|string',
         ]);
 
-        Notification::send(User::whereEmail('contact@safrilen.com')->first(), new ContactNotification($request->all()));
+        Notification::send(User::whereEmail(env('COMPANY_EMAIL'))->first(), new ContactNotification($request->all()));
 
         return response()->json([
             'message' => UtilController::message('Formulaire soumis.', 'success'),

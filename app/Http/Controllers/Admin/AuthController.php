@@ -101,12 +101,11 @@ class AuthController extends Controller
             $token = $tokenResult->token;
             $token->save();
             return response()->json([
-                'access_token' => $tokenResult->accessToken,
-                'token_type' => 'Bearer',
+                'token' => 'Bearer ' . $tokenResult->accessToken,
                 'expires_at' => Carbon::parse(
                     $tokenResult->token->expires_at
                 )->toDateTimeString(),
-                'userData' => array_merge($admin->toArray(), [
+                'data' => array_merge($admin->toArray(), [
                     'notifications' => $admin->unreadNotifications()->latest()->limit(5)->get(),
                     // 'messages' => ContactUs::whereStatus(0)->latest()->limit(5)->get(),
                     'language' => $admin->language->abbr
