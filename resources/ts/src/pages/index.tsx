@@ -47,7 +47,7 @@ const HomePage = () => {
     const Icon = [LightBulbIcon, PresentationChartLineIcon, BoltIcon, ShieldCheckIcon, WrenchScrewdriverIcon][i]
 
     return <div key={`solution-${solution}`} className="flex-none flex flex-col w-1/2 md:w-1/3 p-2 md:p-3">
-      <SolutionBlock icon={Icon} title={solution} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati nemo quae error deserunt dignissimos doloremque, dolorum fugit veniam quam ducimus! Ullam doloribus maxime dignissimos quo ex quibusdam, alias excepturi voluptate?"} />
+      <SolutionBlock icon={Icon} title={solution} rank={i + 1} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati nemo quae error deserunt dignissimos doloremque, dolorum fugit veniam quam ducimus! Ullam doloribus maxime dignissimos quo ex quibusdam, alias excepturi voluptate?"} />
     </div>
   })
 
@@ -92,7 +92,7 @@ const HomePage = () => {
         <div className="container">
           <h1 className='mx-auto max-w-4xl font-display text-5xl font-extrabold tracking-tight sm:text-7xl'>{cms.banner.title}</h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-xl tracking-tight">{cms.banner.subtitle}</p>
+          <p className="mx-auto mt-6 max-w-2xl text-2xl tracking-tight">{cms.banner.subtitle}</p>
         </div>
       </header>
 

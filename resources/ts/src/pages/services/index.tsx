@@ -21,7 +21,7 @@ const solutionsContent = solutions.map((solution, i) => {
     const Icon = [LightBulbIcon, PresentationChartLineIcon, BoltIcon, ShieldCheckIcon, WrenchScrewdriverIcon][i]
 
     return <div key={`solution-${solution}`} className="flex-none flex flex-col w-1/2 md:w-1/3 p-2 md:p-3">
-      <SolutionBlock icon={Icon} title={solution} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati nemo quae error deserunt dignissimos doloremque, dolorum fugit veniam quam ducimus! Ullam doloribus maxime dignissimos quo ex quibusdam, alias excepturi voluptate?"} />
+      <SolutionBlock icon={Icon} title={solution} rank={i + 1} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati nemo quae error deserunt dignissimos doloremque, dolorum fugit veniam quam ducimus! Ullam doloribus maxime dignissimos quo ex quibusdam, alias excepturi voluptate?"} />
     </div>
   })
 

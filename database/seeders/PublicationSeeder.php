@@ -18,12 +18,27 @@ class PublicationSeeder extends Seeder
         $publications = [
             [
                 'title' => json_encode([
+                    'fr' => "Groupe électrogène",
+                    'en' => "Groupe électrogène",
+                ]),
+                'description' => json_encode([
+                    'fr' => "Ce qu'il faut savoir sur les groupes électrogènes",
+                    'en' => "Ce qu'il faut savoir sur les groupes électrogènes",
+                ]),
+                'body' => json_encode([
+                    'fr' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
+                    'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
+                ]),
+                'photo' => "hub-groupe-electrogene-pjp5c20a1fd45a8dc00011eead4.jpg"
+            ],
+            [
+                'title' => json_encode([
                     'fr' => "Onduleurs solaires",
                     'en' => "Onduleurs solaires",
                 ]),
                 'description' => json_encode([
-                    'fr' => "Ce qu'il faut savoir sur l'énergie solaire.",
-                    'en' => "Ce qu'il faut savoir sur l'énergie solaire.",
+                    'fr' => "Ce qu'il faut savoir sur les onduleurs solaires.",
+                    'en' => "Ce qu'il faut savoir sur les onduleurs solaires.",
                 ]),
                 'body' => json_encode([
                     'fr' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
@@ -37,29 +52,14 @@ class PublicationSeeder extends Seeder
                     'en' => "Onduleurs électriques",
                 ]),
                 'description' => json_encode([
-                    'fr' => "Ce qu'il faut savoir sur l'énergie solaire.",
-                    'en' => "Ce qu'il faut savoir sur l'énergie solaire.",
+                    'fr' => "Ce qu'il faut savoir sur les onduleurs électriques.",
+                    'en' => "Ce qu'il faut savoir sur les onduleurs électriques.",
                 ]),
                 'body' => json_encode([
                     'fr' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                     'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                 ]),
-                'photo' => "HLB1sI7wUsbpK1RjSZFyq6x_qFXan.jpg"
-            ],
-            [
-                'title' => json_encode([
-                    'fr' => "Groupe électrogène",
-                    'en' => "Groupe électrogène",
-                ]),
-                'description' => json_encode([
-                    'fr' => "Ce qu'il faut savoir sur l'énergie solaire.",
-                    'en' => "Ce qu'il faut savoir sur l'énergie solaire.",
-                ]),
-                'body' => json_encode([
-                    'fr' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
-                    'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
-                ]),
-                'photo' => "hub-groupe-electrogene-pjp5c20a1fd45a8dc00011eead4.jpg"
+                'photo' => "05d8598fa4fa.webp"
             ],
         ];
 

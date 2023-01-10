@@ -46,7 +46,7 @@ class ServiceSeeder extends Seeder
                     'fr' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                     'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                 ]),
-                'photo' => 'african-american-technician-african-american-technician-check-maintenance-solar-panels-black-woman-engineer-solar-211456188.jpg',
+                'photo' => 'BeYourBold_Blog_Engineering.jpg',
             ],
             [
                 'title' => json_encode([
@@ -57,7 +57,7 @@ class ServiceSeeder extends Seeder
                     'fr' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                     'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                 ]),
-                'photo' => 'formation-afrique-de-sud.jpeg',
+                'photo' => 'young-man-woman-sitting-cafe.jpg',
             ],
         ];
 
