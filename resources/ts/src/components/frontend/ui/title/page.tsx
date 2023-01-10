@@ -1,7 +1,7 @@
 
 interface PageTitleProps {
     title: string
-    subtitle: string
+    subtitle?: string
 }
 
 export default function PageTitle({ title, subtitle }: PageTitleProps) {
@@ -12,7 +12,7 @@ export default function PageTitle({ title, subtitle }: PageTitleProps) {
         <div className="container text-center text-white">
             <h1 className='mx-auto max-w-4xl font-display text-4xl font-extrabold tracking-tight sm:text-6xl'>{title}</h1>
 
-            <p className="mx-auto mt-6 max-w-2xl text-sm sm:text-base tracking-tight">{subtitle}</p>
+            {subtitle ? <p className="mx-auto mt-6 max-w-2xl text-sm sm:text-base tracking-tight">{subtitle}</p> : null}
         </div>
     </div>
 }

@@ -57,7 +57,7 @@ const ProductPage = () => {
 
             <SectionBlock id="products" className="bg-grid-primary/[0.05] relative z-0 after:absolute after:bottom-0 after:inset-0 after:bg-gradient-to-t after:from-white after:to-transparent after:-z-10">
                 <div className="container">
-                    <SectionTitle centered head={cms.products.head} title={cms.products.title} />
+                    <SectionTitle centered title={cms.products.title} />
 
                     <div className="grid gap-6 grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
                         {productsContent}

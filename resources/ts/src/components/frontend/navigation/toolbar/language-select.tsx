@@ -32,7 +32,7 @@ export default function LanguageSelect() {
                     <Transition as={Fragment} leave="transition ease-in duration-100" leaveFrom="opacity-100" leaveTo="opacity-0">
                         <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-xs md:text-sm shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                             {languages?.filter(l => l.abbr !== selected.abbr).map((l, index) => (
-                                <Listbox.Option key={index} className={({ active }) => `relative cursor-default select-none p-2 ${active ? 'bg-primary-100 text-primary-900' : 'text-secondary-900'}`} value={l}>
+                                <Listbox.Option key={index} className={({ active }) => `relative cursor-pointer select-none p-2 ${active ? 'bg-primary/10 text-primary' : 'text-secondary-900'}`} value={l}>
                                     {({ selected }) => (<>
                                         <div className="flex items-center">
                                             <div className='mr-[5.55px]'>

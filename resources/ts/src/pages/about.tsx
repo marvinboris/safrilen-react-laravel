@@ -70,11 +70,11 @@ const AboutPage = () => {
     return <>
         <Head link='/about' title={`${menu.about} | ${app_name}`} description={cms.description} />
         <main>
-            <PageTitle title={cms.title} subtitle={cms.subtitle} />
+            <PageTitle title={cms.title} />
 
             <SectionBlock id='about' className="flex items-center">
                 <div className='container'>
-                    <SectionTitle centered head={cms.about.head} title={cms.about.title} />
+                    <SectionTitle centered title={cms.about.title} />
 
                     <div className='grid gap-6 md:grid-cols-3'>
                         <div>
@@ -93,8 +93,8 @@ const AboutPage = () => {
                                     <ul>{cms.about.goal.items.map((goal, i) => <Li key={`about-about-goal-${i}`}>{goal}</Li>)}</ul>
                                 </Article>
 
-                                <Article title={cms.about.follow.title}>
-                                    {cms.about.follow.body}
+                                <Article title={cms.about.strengths.title}>
+                                    <ul>{cms.about.strengths.items.map((strength, i) => <Li key={`about-about-strength-${i}`}>{strength}</Li>)}</ul>
                                 </Article>
                             </div>
                         </div>
@@ -103,8 +103,8 @@ const AboutPage = () => {
                             <div className='space-y-6'>
                                 <div>{cms.about.description}</div>
 
-                                <Article title={cms.about.strengths.title}>
-                                    <ul>{cms.about.strengths.items.map((strength, i) => <Li key={`about-about-strength-${i}`}>{strength}</Li>)}</ul>
+                                <Article title={cms.about.follow.title}>
+                                    {cms.about.follow.body}
                                 </Article>
                             </div>
                         </div>
@@ -112,7 +112,7 @@ const AboutPage = () => {
                         <div>
                             <div className='relative'>
                                 <div className="aspect-video relative">
-                                    <img src="/images/frontend/2015_08_20_ValeursEntreprise.png" alt="Banner" className="absolute rounded-[30px] top-0 z-20 image-cover" />
+                                    <img src="/images/frontend/page-2.jpg" alt="Banner" className="absolute rounded-[30px] top-0 z-20 image-cover" />
                                 </div>
                             </div>
                         </div>
@@ -122,7 +122,7 @@ const AboutPage = () => {
 
             <SectionBlock id="services" className="before:absolute before:bg-grid-white/[0.05] before:inset-0 before:-z-10 relative z-0 after:absolute after:bottom-0 after:inset-0 after:bg-gradient-to-t after:from-primary after:to-primary/60 after:-z-20">
                 <div className="container">
-                    <SectionTitle white centered head={cms.services.head} title={cms.services.title} />
+                    <SectionTitle white centered title={cms.services.title} />
 
                     <div className="flex flex-nowrap md:flex-wrap overflow-auto -mx-7 px-5 md:px-4 mb-6">
                         {servicesContent}

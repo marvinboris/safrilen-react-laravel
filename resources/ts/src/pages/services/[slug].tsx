@@ -46,7 +46,7 @@ const ServicePage = () => {
 
             <SectionBlock id="services" className="bg-grid-primary/[0.05] relative z-0 after:absolute after:bottom-0 after:inset-0 after:bg-gradient-to-t after:from-white after:to-transparent after:-z-10">
                 <div className="container">
-                    <SectionTitle centered head={cms.services.head} title={cms.services.title} />
+                    <SectionTitle centered title={cms.services.title} />
 
                     <div className="flex flex-wrap -mx-3">
                         {servicesContent}

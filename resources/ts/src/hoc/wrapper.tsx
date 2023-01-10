@@ -23,8 +23,6 @@ import LanguageType from '../app/types/language'
 
 import { check, selectAuth } from '../features/auth/authSlice'
 
-import tailwindConfig from '../../../../tailwind.config'
-
 interface WrapperProps {
   children: ReactNode
 }
@@ -77,7 +75,7 @@ export default function Wrapper({ children }: WrapperProps) {
   }, [languages, setLanguage])
 
   useEffect(() => {
-    if (content === null) getContent(process.env.NEXT_PUBLIC_DEFAULT_LANG!)
+    if (content === null) getContent('fr')
       .then(content => setContent(content))
   }, [content])
 
@@ -90,8 +88,8 @@ export default function Wrapper({ children }: WrapperProps) {
       <CountriesContext.Provider value={{ countries, setCountries }}>
         <ContentContext.Provider value={{ content, setContent }}>
           <HeadProvider>
-            <meta name="msapplication-TileColor" content={tailwindConfig.theme.extend.colors.primary} />
-            <meta name="theme-color" content={theme === Theme.DARK ? tailwindConfig.theme.extend.colors.secondary[900] : "#ffffff"} />
+            <meta name="msapplication-TileColor" content="#283890" />
+            <meta name="theme-color" content={theme === Theme.DARK ? "#171717" : "#ffffff"} />
           </HeadProvider>
 
           {theme != null && children}

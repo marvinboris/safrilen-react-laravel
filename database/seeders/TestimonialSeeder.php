@@ -21,11 +21,8 @@ class TestimonialSeeder extends Seeder
                     'fr' => 'Société Nationale de Raffinerie',
                     'en' => 'Absolutely perfect!',
                 ]),
-                'body' => json_encode([
-                    'fr' => 'Une jeune équipe dynamique que nous recommandons fortement.',
-                    'en' => 'Our premises have been cleared of all pests present.',
-                ]),
-                'photo' => 'logo-sonara.png'
+                'photo' => 'logo-sonara.png',
+                'link' => 'https://sonara-cm.cm',
             ],
             [
                 'name' => 'ANTIC',
@@ -33,11 +30,8 @@ class TestimonialSeeder extends Seeder
                     'fr' => 'Agence Nationale des TIC',
                     'en' => 'Best decision ever',
                 ]),
-                'body' => json_encode([
-                    'fr' => 'Une expertise comme on en trouve rarement.',
-                    'en' => 'The personnel of our company are brilliantly trained in pest management.',
-                ]),
-                'photo' => 'logo-antic.png'
+                'photo' => 'logo-antic.png',
+                'link' => 'https://antic.cm',
             ],
         ];
 

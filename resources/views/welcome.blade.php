@@ -10,14 +10,10 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="icon" href="{{ asset('images/favicon.png') }}">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-display.min.css" />
@@ -38,9 +34,12 @@
     <meta property="og:site_name" content="{{ config('app.name', 'Laravel') }}" />
 
     <meta name="twitter:card" content="summary" />
+
+    @viteReactRefresh
+    @vite('resources/ts/app.tsx')
 </head>
 
-<body class="scrollbar-primary">
+<body>
     <div id="app">
     </div>
 </body>

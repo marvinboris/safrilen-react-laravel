@@ -18,8 +18,8 @@ class FrontendController extends Controller
 {
     public function home()
     {
-        $images = Image::take(12)->get();
-        $testimonials = Testimonial::orderBy('id', 'DESC')->whereIsActive(1)->take(3)->get();
+        $images = Image::take(4)->get();
+        $testimonials = Testimonial::orderBy('id')->whereIsActive(1)->take(3)->get();
         $publications = [];
         foreach (Publication::orderBy('id', 'DESC')->whereIsActive(1)->take(3)->get() as $publication) {
             $publications[] = array_merge($publication->toArray(), [

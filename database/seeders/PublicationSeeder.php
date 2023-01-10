@@ -18,8 +18,8 @@ class PublicationSeeder extends Seeder
         $publications = [
             [
                 'title' => json_encode([
-                    'fr' => "L'énergie solaire",
-                    'en' => "L'énergie solaire",
+                    'fr' => "Onduleurs solaires",
+                    'en' => "Onduleurs solaires",
                 ]),
                 'description' => json_encode([
                     'fr' => "Ce qu'il faut savoir sur l'énergie solaire.",
@@ -29,37 +29,37 @@ class PublicationSeeder extends Seeder
                     'fr' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                     'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                 ]),
-                'photo' => "anders-j-hxUcl0nUsIY-unsplash.jpg"
+                'photo' => "Onduleur-solaire.jpg"
             ],
             [
                 'title' => json_encode([
-                    'fr' => "Les circuits imprimés",
-                    'en' => "Les circuits imprimés",
+                    'fr' => "Onduleurs électriques",
+                    'en' => "Onduleurs électriques",
                 ]),
                 'description' => json_encode([
-                    'fr' => "L'électricité de la plus grande à la plus petite échelle.",
-                    'en' => "L'électricité de la plus grande à la plus petite échelle.",
+                    'fr' => "Ce qu'il faut savoir sur l'énergie solaire.",
+                    'en' => "Ce qu'il faut savoir sur l'énergie solaire.",
                 ]),
                 'body' => json_encode([
                     'fr' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                     'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                 ]),
-                'photo' => "alexandre-debieve-FO7JIlwjOtU-unsplash.jpg"
+                'photo' => "HLB1sI7wUsbpK1RjSZFyq6x_qFXan.jpg"
             ],
             [
                 'title' => json_encode([
-                    'fr' => "Les bases du câblage",
-                    'en' => "Les bases du câblage",
+                    'fr' => "Groupe électrogène",
+                    'en' => "Groupe électrogène",
                 ]),
                 'description' => json_encode([
-                    'fr' => "Les rudiments du bon électricien.",
-                    'en' => "Les rudiments du bon électricien.",
+                    'fr' => "Ce qu'il faut savoir sur l'énergie solaire.",
+                    'en' => "Ce qu'il faut savoir sur l'énergie solaire.",
                 ]),
                 'body' => json_encode([
                     'fr' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                     'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                 ]),
-                'photo' => "nicolas-thomas-3GZi6OpSDcY-unsplash.jpg"
+                'photo' => "hub-groupe-electrogene-pjp5c20a1fd45a8dc00011eead4.jpg"
             ],
         ];
 

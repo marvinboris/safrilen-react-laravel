@@ -17,8 +17,8 @@ class CreateTestimonialsTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('title');
-            $table->longText('body');
             $table->text('photo');
+            $table->text('link');
             $table->tinyInteger('is_active')->default(1);
             $table->timestamps();
         });

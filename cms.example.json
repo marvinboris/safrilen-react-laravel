@@ -576,11 +576,11 @@
                         }
                     },
                     "solutions": [
-                        "Gestion stratégique de l'énergie",
-                        "Contrôle, diagnostic et maintenance des installations",
-                        "Recyclage de l'énergie",
+                        "Recueil et diagnostic des besoins en énergie",
+                        "Proposition technique et commerciale sur mesure",
+                        "Installation et formation",
                         "Equipement de protection individuelle",
-                        "Service après vente"
+                        "Service après vente / maintenance"
                     ]
                 },
                 "messages": {
@@ -600,8 +600,8 @@
                 "pages": {
                     "home": {
                         "banner": {
-                            "title": "Vivez l'énergie",
-                            "subtitle": "Une alimentation efficace en électricité pour tous vos projets."
+                            "title": "Energie pour tous",
+                            "subtitle": "Une alimentation efficace en énergie pour tous vos projets."
                         },
                         "services": {
                             "head": "Comment vous aider",
@@ -610,7 +610,7 @@
                         },
                         "solutions": {
                             "head": "Vos problèmes résolus",
-                            "title": "Nos solutions"
+                            "title": "Notre process"
                         },
                         "testimonials": {
                             "head": "Des opinions sur nos prestations",
@@ -666,14 +666,14 @@
                                 "items": [
                                     "Un interlocuteur unique",
                                     "Un service sur-mesure",
-                                    "Accompagnement et suivi technique et commercial"
+                                    "Un accompagnement et un suivi technique et commercial"
                                 ]
                             },
                             "goal": {
                                 "title": "Notre objectif",
                                 "items": [
                                     "Optimiser votre offre énergétique",
-                                    "Une équipe capable d'analyser et d'élaborer des offres sur-mesure"
+                                    "Mettre à votre disposition une équipe capable d'analyser et d'élaborer des offres sur-mesure"
                                 ]
                             },
                             "follow": {
@@ -694,7 +694,7 @@
                         "form": {
                             "head": "Formulaire de contact",
                             "title": "N'hésitez pas",
-                            "description": "Un souci d'installation, de maintenance, au bureau, à la maison ou ailleurs ? Bénéficiez de notre expertise.",
+                            "description": "Pour toute question ou information, n'hésitez pas à nous contacter.",
                             "name": "Nom",
                             "email": "E-mail",
                             "subject": "Objet",
@@ -712,7 +712,7 @@
                         },
                         "solutions": {
                             "head": "Vos problèmes résolus",
-                            "title": "Nos solutions"
+                            "title": "Notre process"
                         }
                     },
                     "publications": {

@@ -27,11 +27,11 @@ const ProductsPage = () => {
     return <>
         <Head link='/products' title={`${menu.products} | ${app_name}`} description={cms.description} />
         <main>
-            <PageTitle title={cms.title} subtitle={cms.subtitle} />
+            <PageTitle title={cms.title} />
 
             <SectionBlock id="products">
                 <div className="container">
-                    <SectionTitle centered head={cms.products.head} title={cms.products.title} />
+                    <SectionTitle centered title={cms.products.title} />
 
                     <div className="grid gap-4 md:gap-6 grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
                         {productsContent}

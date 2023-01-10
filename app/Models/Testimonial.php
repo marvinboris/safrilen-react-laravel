@@ -13,7 +13,7 @@ class Testimonial extends Model
     protected $table = 'testimonials';
 
     protected $fillable = [
-        'name', 'photo', 'title', 'body', 'is_active',
+        'name', 'photo', 'title', 'link', 'is_active',
     ];
 
     protected $directory = '/images/testimonials/';

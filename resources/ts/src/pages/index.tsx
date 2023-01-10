@@ -62,7 +62,7 @@ const HomePage = () => {
   const galleryContent = home.images.map((image: ImageType, index: number) => <ImageBlock key={`image-${image.id}-${index}`} {...image} />)
 
   const testimonialsContent = []
-  const renderTestimonial = (testimonial: TestimonialType, index: number) => <TestimonialBlock key={`testimonial-${testimonial.body}-${index}`} {...testimonial} />
+  const renderTestimonial = (testimonial: TestimonialType, index: number) => <TestimonialBlock key={`testimonial-${testimonial.link}-${index}`} {...testimonial} />
   for (let i = 0; i < Math.ceil(home.testimonials.length / 2); i++) {
     testimonialsContent.push(<li key={`testimonialsContent-${i}`}>
       <ul role="list" className="flex flex-col gap-y-6 sm:gap-y-8">
@@ -92,7 +92,7 @@ const HomePage = () => {
         <div className="container">
           <h1 className='mx-auto max-w-4xl font-display text-5xl font-extrabold tracking-tight sm:text-7xl'>{cms.banner.title}</h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight">{cms.banner.subtitle}</p>
+          <p className="mx-auto mt-6 max-w-2xl text-xl tracking-tight">{cms.banner.subtitle}</p>
         </div>
       </header>
 
@@ -100,11 +100,9 @@ const HomePage = () => {
         <div className='container'>
           <div className='grid md:gap-12 md:grid-cols-2'>
             <div>
-              <SectionTitle head={cms.about.head} title={cms.about.title} />
+              <SectionTitle title={cms.about.title} />
 
-              <div className="mb-5">{cms.about.description}</div>
-
-              <ul className='mb-6 md:mb-14'>{cms.about.services.map((service, i) => <Li key={`home-about-service-${i}`}>{service}</Li>)}</ul>
+              <div className="mb-5 md:mb-14">{cms.about.description}</div>
 
               <div className="hidden md:block">
                 <Link to='/about'><Button icon={ArrowRightIcon}>{cms.about.read_more}</Button></Link>
@@ -131,7 +129,7 @@ const HomePage = () => {
 
       <SectionBlock id="services" className="bg-grid-primary/[0.05] relative z-0 after:absolute after:bottom-0 after:inset-0 after:bg-gradient-to-t after:from-white after:to-transparent after:-z-10">
         <div className="container">
-          <SectionTitle centered head={cms.services.head} title={cms.services.title} />
+          <SectionTitle centered title={cms.services.title} />
 
           <div className="flex flex-nowrap md:flex-wrap overflow-auto -mx-7 px-5 md:px-4 mb-6">
             {servicesContent}
@@ -145,7 +143,7 @@ const HomePage = () => {
 
       <SectionBlock id="solutions">
         <div className="container">
-          <SectionTitle centered head={cms.solutions.head} title={cms.solutions.title} />
+          <SectionTitle centered title={cms.solutions.title} />
 
           <div className="flex flex-wrap justify-center -mx-2 px-2 md:-mx-3 md:px-3">
             {solutionsContent}
@@ -156,16 +154,16 @@ const HomePage = () => {
       <SectionBlock id="testimonials" className="bg-grid-primary/[0.05] relative z-0 after:absolute after:bottom-0 after:inset-0 after:bg-gradient-to-t after:from-white after:to-transparent after:-z-10">
         <div className="container">
           <div className="lg:flex flex-wrap items-center lg:-mx-3">
-            <div className="order-1 lg:order-2 lg:w-6/12 xl:w-5/12 lg:px-3">
-              <SectionTitle centered head={cms.testimonials.head} title={cms.testimonials.title} />
+            <div className="order-1 lg:order-2 lg:w-6/12 lg:px-3">
+              <SectionTitle centered title={cms.testimonials.title} />
 
               <ul role="list" className="grid grid-cols-1 gap-6">
                 {testimonialsContent}
               </ul>
             </div>
 
-            <div className="order-2 lg:order-1 mt-16 lg:mt-0 lg:w-6/12 xl:w-7/12 lg:px-3">
-              <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 md:gap-6">
+            <div className="order-2 lg:order-1 mt-16 lg:mt-0 lg:w-6/12 lg:px-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                 {galleryContent}
               </div>
             </div>
@@ -175,7 +173,7 @@ const HomePage = () => {
 
       <SectionBlock id="publications">
         <div className="container">
-          <SectionTitle centered head={cms.publications.head} title={cms.publications.title} />
+          <SectionTitle centered title={cms.publications.title} />
 
           <div className="flex flex-nowrap md:flex-wrap overflow-auto -mx-7 px-5 md:px-4 mb-6 pb-5">
             {publicationsContent}

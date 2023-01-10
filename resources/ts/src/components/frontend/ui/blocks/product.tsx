@@ -13,10 +13,6 @@ export default function ProductBlock({ name, price, link, photo, white }: Produc
             <img src={photo!} alt={name[abbr]} className="object-contain w-full h-28" />
         </div>
 
-        <div className="text-sm line-clamp-2 mb-1.5">{name[abbr]}</div>
-
-        <div>
-            <span className="font-bold text-lg">{price}</span>{' '}<span className="opacity-50 text-xs">XAF</span>
-        </div>
+        <div className="text-sm line-clamp-2 mb-1.5 text-center font-medium">{name[abbr]}</div>
     </Link>
 }

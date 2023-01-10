@@ -66,7 +66,7 @@ const ContactPage = () => {
                         </div>
 
                         <div className="order-1 md:order-2">
-                            <SectionTitle head={cms.contact.head} title={cms.contact.title} />
+                            <SectionTitle title={cms.contact.title} />
 
                             <div className='space-y-6'>
                                 <div className="flex">

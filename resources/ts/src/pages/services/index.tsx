@@ -28,13 +28,13 @@ const solutionsContent = solutions.map((solution, i) => {
     return <>
         <Head link='/services' title={`${menu.services} | ${app_name}`} description={cms.description} />
         <main>
-            <PageTitle title={cms.title} subtitle={cms.subtitle} />
+            <PageTitle title={cms.title} />
 
             <SectionBlock id="services">
                 <div className="container">
-                    <SectionTitle centered head={cms.services.head} title={cms.services.title} />
+                    <SectionTitle centered title={cms.services.title} />
 
-                    <div className="flex flex-wrap -mx-3">
+                    <div className="flex flex-wrap justify-center -mx-3">
                         {servicesContent}
                     </div>
                 </div>
@@ -42,7 +42,7 @@ const solutionsContent = solutions.map((solution, i) => {
 
             <SectionBlock id="solutions" className="bg-grid-primary/[0.05] relative z-0 after:absolute after:bottom-0 after:inset-0 after:bg-gradient-to-t after:from-white after:to-transparent after:-z-10">
                 <div className="container">
-                    <SectionTitle centered head={cms.solutions.head} title={cms.solutions.title} />
+                    <SectionTitle centered title={cms.solutions.title} />
 
                     <div className="flex flex-wrap justify-center -mx-2 px-2 md:-mx-3 md:px-3">
                         {solutionsContent}
