@@ -102,7 +102,7 @@ const HomePage = () => {
             <div>
               <SectionTitle title={cms.about.title} />
 
-              <div className="mb-5 md:mb-14">{cms.about.description}</div>
+              <div className="mb-5 md:mb-14" dangerouslySetInnerHTML={{ __html: cms.about.description }} />
 
               <div className="hidden md:block">
                 <Link to='/about'><Button icon={ArrowRightIcon}>{cms.about.read_more}</Button></Link>

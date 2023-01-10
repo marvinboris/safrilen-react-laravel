@@ -87,7 +87,7 @@ const AboutPage = () => {
 
                         <div className='md:col-span-2'>
                             <div className='space-y-6'>
-                                <div>{cms.about.description}</div>
+                                <div dangerouslySetInnerHTML={{ __html: cms.about.description }} />
 
                                 <Article title={cms.about.goal.title}>
                                     <ul>{cms.about.goal.items.map((goal, i) => <Li key={`about-about-goal-${i}`}>{goal}</Li>)}</ul>
@@ -101,7 +101,7 @@ const AboutPage = () => {
 
                         <div className='md:col-span-2'>
                             <div className='space-y-6'>
-                                <div>{cms.about.description}</div>
+                                <div dangerouslySetInnerHTML={{ __html: cms.about.expertise }} />
 
                                 <Article title={cms.about.follow.title}>
                                     {cms.about.follow.body}
