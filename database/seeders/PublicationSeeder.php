@@ -29,7 +29,7 @@ class PublicationSeeder extends Seeder
                     'fr' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                     'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                 ]),
-                'photo' => "hub-groupe-electrogene-pjp5c20a1fd45a8dc00011eead4.jpg"
+                'photo' => "WhatsApp Image 2023-01-16 at 12.22.21 (3).jpeg"
             ],
             [
                 'title' => json_encode([

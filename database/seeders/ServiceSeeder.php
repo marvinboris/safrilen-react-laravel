@@ -24,7 +24,7 @@ class ServiceSeeder extends Seeder
                     'fr' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                     'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                 ]),
-                'photo' => 'sigmund-r6tyWx_Mm9g-unsplash.jpg',
+                'photo' => 'WhatsApp Image 2023-01-16 at 12.22.21 (2).jpeg',
             ],
             [
                 'title' => json_encode([
@@ -35,7 +35,7 @@ class ServiceSeeder extends Seeder
                     'fr' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                     'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                 ]),
-                'photo' => 'emmanuel-ikwuegbu-_2AlIm-F6pw-unsplash.jpg',
+                'photo' => 'WhatsApp Image 2023-01-16 at 12.22.21.jpeg',
             ],
             [
                 'title' => json_encode([

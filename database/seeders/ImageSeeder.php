@@ -16,11 +16,11 @@ class ImageSeeder extends Seeder
     public function run()
     {
         $Images = [
-            ['photo' => "alexandre-debieve-FO7JIlwjOtU-unsplash.jpg",],
+            ['photo' => "hobi-industri-NLBJ2I0lNr4-unsplash.jpg",],
             ['photo' => "anders-j-hxUcl0nUsIY-unsplash.jpg",],
             ['photo' => "danilo-alvesd-AzqJSCPkZkI-unsplash.jpg",],
             ['photo' => "emmanuel-ikwuegbu-_2AlIm-F6pw-unsplash.jpg",],
-            ['photo' => "hobi-industri-NLBJ2I0lNr4-unsplash.jpg",],
+            ['photo' => "alexandre-debieve-FO7JIlwjOtU-unsplash.jpg",],
             ['photo' => "john-barkiple-l090uFWoPaI-unsplash.jpg",],
             ['photo' => "mh-tri-TadNRJiOHB4-unsplash.jpg",],
             ['photo' => "nicolas-thomas-3GZi6OpSDcY-unsplash.jpg",],
