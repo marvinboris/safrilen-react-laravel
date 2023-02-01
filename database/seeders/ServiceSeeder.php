@@ -32,7 +32,8 @@ class ServiceSeeder extends Seeder
                     'en' => 'Phytosanitary treatment',
                 ]),
                 'body' => json_encode([
-                    'fr' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
+                    'fr' => "Apres avoir passé commande auprès de notre entreprise, vous bénéficiez d’un service d’un comprenant la livraison, le montage et le raccordement et la mise en service des équipements. <br />
+                    Notre équipe techniques prendra contact avec vous afin de convenir d’une date de livraison et d’installation.",
                     'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                 ]),
                 'photo' => 'WhatsApp Image 2023-01-16 at 12.22.21.jpeg',
@@ -41,9 +42,12 @@ class ServiceSeeder extends Seeder
                 'title' => json_encode([
                     'fr' => 'Maintenance',
                     'en' => 'Green spaces',
-            ]),
+                ]),
                 'body' => json_encode([
-                    'fr' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
+                    'fr' => "La maintenance industrielle est une fonction stratégique en entreprise !  <br />
+                    Elle est au cœur de toute activité industrielle et constitue un enjeu majeur pour la productivité et la compétitivité des entreprises.<br /> 
+                    Si on a pu, par le passé, lui donner pour seule vocation d’assurer le bon fonctionnement des outils de production, ses objectifs sont bien plus nombreux et complexes.<br /> 
+                    En effet, les enjeux de la maintenance industrielle sont à la frontière entre des enjeux financiers, de sécurité et d’environnement liés au recyclage des machines.",
                     'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                 ]),
                 'photo' => 'BeYourBold_Blog_Engineering.jpg',
@@ -52,9 +56,11 @@ class ServiceSeeder extends Seeder
                 'title' => json_encode([
                     'fr' => 'Formation',
                     'en' => 'Hygiene and sanitation',
-            ]),
+                ]),
                 'body' => json_encode([
-                    'fr' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
+                    'fr' => "Grace à leur savoir faire et leur expérience, nos ingénieurs et techniciens  
+                    tiennent à la disposition de nos partenaires afin d’apporter les outils et formations à 
+                    leurs équipes, nécessaires au bon fonctionnement des équipements.",
                     'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                 ]),
                 'photo' => 'young-man-woman-sitting-cafe.jpg',

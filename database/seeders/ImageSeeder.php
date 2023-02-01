@@ -15,7 +15,7 @@ class ImageSeeder extends Seeder
      */
     public function run()
     {
-        $Images = [
+        $images = [
             ['photo' => "hobi-industri-NLBJ2I0lNr4-unsplash.jpg",],
             ['photo' => "anders-j-hxUcl0nUsIY-unsplash.jpg",],
             ['photo' => "danilo-alvesd-AzqJSCPkZkI-unsplash.jpg",],
@@ -31,8 +31,8 @@ class ImageSeeder extends Seeder
             ['photo' => "christopher-burns-8KfCR12oeUM-unsplash.jpg",],
         ];
 
-        foreach ($Images as $Image) {
-            Image::create($Image);
+        foreach ($images as $image) {
+            Image::create($image);
         }
     }
 }
