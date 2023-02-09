@@ -45,7 +45,7 @@ const PublicationPage = () => {
 
                             <div className='space-y-4 mt-5'>
                                 <div className='font-medium text-lg'>{publication.description[abbr]}</div>
-                                <div className='list-disc pl-4' />
+                                <div className='list-disc pl-4 space-y-3' />
                                 <div dangerouslySetInnerHTML={{ __html: publication.body[abbr] }} />
                             </div>
                         </div>}

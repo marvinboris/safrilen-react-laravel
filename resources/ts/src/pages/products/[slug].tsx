@@ -45,11 +45,11 @@ const ProductPage = () => {
                         <div>
                             <SectionTitle title={product.name[abbr]} />
 
-                            <div className='my-3'>
+                            {/* <div className='my-3'>
                                 <span className='text-2xl font-bold'>{product.price}</span>{' '}<span>XAF</span>
-                            </div>
+                            </div> */}
 
-                            <div dangerouslySetInnerHTML={{ __html: product.description[abbr] }} />
+                            <div className="mt-3" dangerouslySetInnerHTML={{ __html: product.description[abbr] }} />
                         </div>
                     </div>
                 </div>
