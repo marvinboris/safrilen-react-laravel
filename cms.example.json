@@ -19,7 +19,7 @@
             },
             "email": "contact@safrilen.com",
             "phone": "+237 653 411 116",
-            "map": "https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3613.8073542448806!2d55.1406664!3d25.0745178!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2scm!4v1665798706407!5m2!1sen!2scm"
+            "map": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15919.909280908641!2d9.7019373!3d4.0250381!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe28d53dbf8cebb4d!2sMAHOL%20CONSULTING!5e0!3m2!1sfr!2scm!4v1656832382871!5m2!1sfr!2scm"
         }
     },
     "pages": {
@@ -539,7 +539,7 @@
                         "contact": {
                             "head": "Gardez contact",
                             "title": "Contact",
-                            "address": "Ndogsimbi - En Face AES Sonel Ndokotti - Face Forage UCB"
+                            "address": "Bonapriso, BP: 5055 Douala<br />Bastos, BP: 10100 Yaoundé Cameroun"
                         },
                         "services": {
                             "head": "Nous proposons",
@@ -640,7 +640,7 @@
                         "contact": {
                             "head": "Retrouvez-nous",
                             "title": "Contact",
-                            "address": "Ndogsimbi - En Face AES Sonel Ndokotti - Face Forage UCB"
+                            "address": "Bonapriso, BP: 5055 Douala<br />Bastos, BP: 10100 Yaoundé Cameroun"
                         },
                         "services": {
                             "head": "Comment vous aider",
@@ -684,18 +684,18 @@
                         }
                     },
                     "contact": {
-                        "title": "Contact",
+                        "title": "N'hésitez pas à nous contacter",
                         "subtitle": "Contactez-nous",
                         "description": "Choisissez comment vous voulez entrer en contact avec Safrilen.",
                         "contact": {
                             "head": "Pour plus d'informations",
-                            "title": "Prenez contact",
-                            "address": "Ndogsimbi - En Face AES Sonel Ndokotti - Face Forage UCB"
+                            "title": "Safrilen",
+                            "address": "Bonapriso, BP: 5055 Douala<br />Bastos, BP: 10100 Yaoundé Cameroun"
                         },
                         "form": {
-                            "head": "Formulaire de contact",
+                            "head": "Formulaire de renseignement",
                             "title": "N'hésitez pas",
-                            "description": "Pour toute question ou information, n'hésitez pas à nous contacter.",
+                            "description": "Pour toutes questions ou informations, <br />veuillez remplir ce formulaire de renseignement.",
                             "name": "Nom",
                             "email": "E-mail",
                             "subject": "Objet",
@@ -1255,7 +1255,7 @@
                         "contact": {
                             "head": "Gardez contact",
                             "title": "Contact",
-                            "address": "Ndogsimbi - En Face AES Sonel Ndokotti - Face Forage UCB"
+                            "address": "Bonapriso, BP: 5055 Douala<br />Bastos, BP: 10100 Yaoundé Cameroun"
                         },
                         "services": {
                             "head": "Nous proposons",
@@ -1278,17 +1278,16 @@
                     },
                     "quote": {
                         "title": "Obtenez un devis",
-                        "subtitle": "Réalisez tout ce que vous voulez !",
                         "form": {
+                            "company": "Entreprise",
                             "first_name": "Prénom(s)",
                             "last_name": "Nom(s)",
-                            "email": "Adresse mail",
+                            "email": "Mail",
                             "phone": "123 456 789",
                             "address": "Adresse",
                             "select_service": "Sélectionner un service",
-                            "date": "Date de visite",
                             "comment": "Détails supplémentaires",
-                            "continue": "Continuer"
+                            "continue": "Valider"
                         }
                     },
                     "solutions": [
@@ -1356,7 +1355,7 @@
                         "contact": {
                             "head": "Retrouvez-nous",
                             "title": "Contact",
-                            "address": "Ndogsimbi - En Face AES Sonel Ndokotti - Face Forage UCB"
+                            "address": "Bonapriso, BP: 5055 Douala<br />Bastos, BP: 10100 Yaoundé Cameroun"
                         },
                         "services": {
                             "head": "Comment vous aider",
@@ -1400,13 +1399,13 @@
                         }
                     },
                     "contact": {
-                        "title": "Contact",
+                        "title": "N'hésitez pas à nous contacter",
                         "subtitle": "Contactez-nous",
                         "description": "Choisissez comment vous voulez entrer en contact avec Safrilen.",
                         "contact": {
                             "head": "Pour plus d'informations",
-                            "title": "Prenez contact",
-                            "address": "Ndogsimbi - En Face AES Sonel Ndokotti - Face Forage UCB"
+                            "title": "Safrilen",
+                            "address": "Bonapriso, BP: 5055 Douala<br />Bastos, BP: 10100 Yaoundé Cameroun"
                         },
                         "form": {
                             "head": "Formulaire de contact",

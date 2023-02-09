@@ -54,7 +54,7 @@ const ContactPage = () => {
     return <>
         <Head link='/contact' title={`${menu.contact} | ${app_name}`} description={cms.description} />
         <main>
-            <PageTitle title={cms.title} subtitle={cms.subtitle} />
+            <PageTitle title={cms.title} />
 
             <SectionBlock id="contact">
                 <div className="container">
@@ -76,9 +76,7 @@ const ContactPage = () => {
                                         </div>
                                     </div>
 
-                                    <div>
-                                        {cms.contact.address}
-                                    </div>
+                                    <div dangerouslySetInnerHTML={{ __html: cms.contact.address }} />
                                 </div>
 
                                 <div className="flex">
@@ -113,9 +111,9 @@ const ContactPage = () => {
             <SectionBlock id='form' className='bg-grid-primary/[0.05] relative z-0 after:absolute after:bottom-0 after:inset-0 after:bg-gradient-to-t after:from-white after:to-transparent after:-z-10'>
                 <div className="container">
                     <div className="mx-auto max-w-3xl">
-                        <SectionTitle centered head={cms.form.head} title={cms.form.title} />
+                        <SectionTitle centered head={cms.form.head} />
 
-                        <div className='mx-auto max-w-xl text-center mb-6 text-lg'>{cms.form.description}</div>
+                        <div className='mx-auto max-w-xl text-center mb-6 text-lg' dangerouslySetInnerHTML={{ __html: cms.form.description }} />
 
                         {message && <Alert className='mb-4' color={message.type}>{message.content}</Alert>}
 

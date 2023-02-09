@@ -21,8 +21,8 @@ class ServiceSeeder extends Seeder
                     'en' => 'Vector control',
                 ]),
                 'body' => json_encode([
-                    'fr' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
-                    'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
+                    'fr' => ".",
+                    'en' => ".",
                 ]),
                 'photo' => 'WhatsApp Image 2023-01-16 at 12.22.21 (2).jpeg',
             ],
@@ -32,8 +32,8 @@ class ServiceSeeder extends Seeder
                     'en' => 'Phytosanitary treatment',
                 ]),
                 'body' => json_encode([
-                    'fr' => "Apres avoir passé commande auprès de notre entreprise, vous bénéficiez d’un service d’un comprenant la livraison, le montage et le raccordement et la mise en service des équipements. <br />
-                    Notre équipe techniques prendra contact avec vous afin de convenir d’une date de livraison et d’installation.",
+                    'fr' => "Apres avoir passé commande auprès de notre entreprise, vous bénéficiez d’un service comprenant la livraison, le montage, le raccordement et la mise en service des équipements. <br />
+                    Notre équipe technique prendra contact avec vous afin de convenir d’une date de livraison et d’installation.",
                     'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
                 ]),
                 'photo' => 'WhatsApp Image 2023-01-16 at 12.22.21.jpeg',
@@ -58,7 +58,7 @@ class ServiceSeeder extends Seeder
                     'en' => 'Hygiene and sanitation',
                 ]),
                 'body' => json_encode([
-                    'fr' => "Grace à leur savoir faire et leur expérience, nos ingénieurs et techniciens  
+                    'fr' => "Grace à leur savoir faire et leur expérience, nos ingénieurs et techniciens se  
                     tiennent à la disposition de nos partenaires afin d’apporter les outils et formations à 
                     leurs équipes, nécessaires au bon fonctionnement des équipements.",
                     'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",

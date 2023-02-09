@@ -100,9 +100,7 @@ export default function Footer() {
                                 </div>
                             </div>
 
-                            <div>
-                                {top.contact.address}
-                            </div>
+                            <div dangerouslySetInnerHTML={{ __html: top.contact.address }} />
                         </div>
 
                         <div className="flex">

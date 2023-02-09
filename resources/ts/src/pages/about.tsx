@@ -154,9 +154,7 @@ const AboutPage = () => {
                                         </div>
                                     </div>
 
-                                    <div>
-                                        {cms.contact.address}
-                                    </div>
+                                    <div dangerouslySetInnerHTML={{ __html: cms.contact.address }} />
                                 </div>
 
                                 <div className="flex">
@@ -193,12 +191,12 @@ const AboutPage = () => {
                     <div className="mx-auto max-w-3xl">
                         <SectionTitle centered head={cms.newsletter.head} title={cms.newsletter.title} />
 
-                        <div className='mx-auto max-w-xl text-center mb-6 text-lg'>{cms.newsletter.description}</div>
+                        {/* <div className='mx-auto max-w-xl text-center mb-6 text-lg'>{cms.newsletter.description}</div> */}
 
                         {message && <Alert className='mb-4' color={message.type}>{message.content}</Alert>}
 
                         <form onSubmit={handleSubmit} className='grid gap-4'>
-                            <Input name='first_name' onChange={onChange} value={value.first_name} required validation={{ required: true }} placeholder={cms.newsletter.form.first_name} />
+                            {/* <Input name='first_name' onChange={onChange} value={value.first_name} required validation={{ required: true }} placeholder={cms.newsletter.form.first_name} /> */}
                             <Input type='email' name='email' onChange={onChange} value={value.email} required validation={{ required: true, isEmail: true }} placeholder={cms.newsletter.form.email} />
 
                             <div className='col-span-2 pt-5 text-center'>

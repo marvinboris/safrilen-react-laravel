@@ -55,7 +55,7 @@ class PublicationSeeder extends Seeder
                     Il convertit cette énergie puis la transforme en courant domestique afin d’alimenter le réseau et les appareils électriques. <br />
                     Il est également équipé d’un microprocesseur qui permet de s’assurer que le courant électrique produit respecte bien les normes imposées par le gestionnaire du réseau.<br /> 
                     <br />
-                    Les différents types d’onduleurs pour panneaux solaires ?
+                    <span class='text-lg font-bold'>Les différents types d’onduleurs pour panneaux solaires</span>
                     <ul class='list-disc pl-4 space-y-3 mt-4'>
                     <li>Le <strong>micro-onduleur</strong> <br />Aussi appelé onduleur module, il s’agit de l’onduleur solaire qui est le plus souvent mis en place et utilisé pour les logements particuliers. De petite taille, il s’installe directement derrière chaque panneau solaire pour transformer l’électricité continue en courant alternatif. Chaque panneau a donc son propre onduleur et est indépendant, ce qui permet une production optimale même en cas de panne, et par conséquent une plus grande évolutivité du parc solaire.</li>
                     <li>L’<strong>onduleur de chaîne</strong> <br />Ce type d’onduleur solaire recueille et transforme l’électricité fournie par plusieurs panneaux solaires en même temps. Plus puissant, il permet de n’avoir qu’un seul onduleur qui gère plusieurs panneaux photovoltaïques, ce qui simplifie l’installation et l’entretien.</li>
@@ -85,9 +85,9 @@ class PublicationSeeder extends Seeder
                     Dès que l'onduleur détecte une coupure soudaine d'électricité, ses batteries prennent automatiquement le relais et alimentent vos équipements pendant une durée correspondante à l’autonomie. <br />
                     <br />
                     Dans un premier temps, en cas de coupure de courant, les batteries de l’onduleur vont fournir l’énergie à vos appareils pendant quelque temps. L’autonomie varie en fonction de la capacité des batteries et de la puissance nécessaire. Il prend le relais quand il y a une coupure de courant. <br />
-                    Dans un second temps, il faut considérer ses apports continus. <br />
-                    Fonctions principales de l’onduleur
-                    <ul class='list-disc pl-4'>
+                    Dans un second temps, il faut considérer ses apports continus. <br /><br />
+                    <span class='text-lg font-bold'>Fonctions principales de l’onduleur</span>
+                    <ul class='list-disc pl-4 mt-4'>
                     <li>Prendre le relais du secteur en cas de coupures du courant</li> 
                     <li>Assurer la continuité de la fourniture d'électricité jusqu'aux appareils si la panne de courant persiste,</li> 
                     <li>Protéger les différentes machines, telles que les appareils industriels, les périphériques informatiques (imprimante, unité centrale, etc.) ou encore les ordinateurs, en cas de coupure répétée d'électricité,</li> 
