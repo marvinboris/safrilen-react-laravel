@@ -37,8 +37,8 @@ const ProductPage = () => {
 
             {product && <SectionBlock id="product">
                 <div className="container">
-                    <div className="grid md:grid-cols-2 gap-6">
-                        {product.photo && <div className='md:h-96 p-6 rounded-[30px] bg-primary/10'>
+                    <div>
+                        {product.photo && <div className='md:h-96 p-6 rounded-[30px] bg-primary/10 md:float-left md:mr-6 mb-6'>
                             <img src={product.photo} alt={product.name[abbr]} className="object-contain w-full h-full" />
                         </div>}
 
@@ -49,7 +49,7 @@ const ProductPage = () => {
                                 <span className='text-2xl font-bold'>{product.price}</span>{' '}<span>XAF</span>
                             </div> */}
 
-                            <div className="mt-3" dangerouslySetInnerHTML={{ __html: product.description[abbr] }} />
+                            <div className="mt-3 md:min-h-[384px]" dangerouslySetInnerHTML={{ __html: product.description[abbr] }} />
                         </div>
                     </div>
                 </div>
