@@ -20,7 +20,7 @@ export default interface ContentType {
                 user: { inactive: string, unauthorized: string, sent: string, reset: string, failure: string }
             }
             pages: {
-                user: { login: { title: string, sign_in: string, email_address: string, password: string } }
+                user: { login: { title: string, sign_in: string, email_address: string, password: string, continue: string } }
                 admin: {
                     login: { sign_in_to: string, sign_in: string, admin_panel: string, email_address: string, password: string, sms: string, email: string, otp_method: string }
                     verify: { enter: string, verification_code: string, continue: string, didnt_receive_code: string, resend: string }
@@ -106,7 +106,7 @@ export default interface ContentType {
                 },
                 subscribers: {
                     title: string, add: string, edit: string, index: string
-                    form: { first_name: string, email: string, created_at: string }
+                    form: { email: string, created_at: string }
                 },
                 services: {
                     title: string, add: string, edit: string, index: string

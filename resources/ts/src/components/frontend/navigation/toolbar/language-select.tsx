@@ -11,23 +11,7 @@ export default function LanguageSelect() {
 
     return language === null ? null : (
         <div className="w-full text-secondary-700">
-            <button className="relative w-full cursor-default text-left sm:text-sm">
-                {selected && <div className="flex items-center rounded-full py-[5px] md:py-[7px] pl-[6px] md:pl-[9px] w-[108px] md:w-36 cursor-pointer bg-secondary-100">
-                    <div className='mr-2'>
-                        <div className="w-[23px] md:w-7 h-[23px] md:h-7 rounded-full relative">
-                            <img src={`/images/flags/1x1/${selected.flag}.svg`} alt="Flag" className="rounded-full" />
-                        </div>
-                    </div>
-
-                    <div className="font-medium text-xs md:text-sm mr-3">{selected.name}</div>
-
-                    <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                        <ChevronDownIcon className="h-5 w-5 text-secondary-400" aria-hidden="true" />
-                    </span>
-                </div>}
-            </button>
-
-            {/* <Listbox value={selected} onChange={setLanguage}>
+            <Listbox value={selected} onChange={setLanguage}>
                 <div className="relative">
                     <Listbox.Button className="relative w-full cursor-default text-left sm:text-sm">
                         {selected && <div className="flex items-center rounded-full py-[5px] md:py-[7px] pl-[6px] md:pl-[9px] w-[108px] md:w-36 cursor-pointer bg-secondary-100">
@@ -70,7 +54,7 @@ export default function LanguageSelect() {
                         </Listbox.Options>
                     </Transition>
                 </div>
-            </Listbox> */}
+            </Listbox>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import { ChatBubbleOvalLeftEllipsisIcon } from '@heroicons/react/24/outline'
 
 import { useContentContext } from '../../../app/contexts/content'
+import { useLanguageContext } from '../../../app/contexts/language'
 import { convertDate, updateObject } from '../../../app/helpers/utils'
 import { useAppDispatch, useAppSelector } from '../../../app/hooks'
 import TestimonialType from '../../../app/types/models/testimonial'
@@ -11,7 +12,6 @@ import ManageRead from '../../../components/backend/ui/page/read'
 
 import { selectAuth } from '../../../features/auth/authSlice'
 import { selectBackend, _delete } from '../../../features/backend/backendSlice'
-import { useLanguageContext } from '../../../app/contexts/language'
 
 const ManageTestimonialsPage = () => {
     const dispatch = useAppDispatch()
@@ -32,7 +32,6 @@ const ManageTestimonialsPage = () => {
         return updateObject(testimonial, {
             created_at: convertDate(testimonial.created_at),
             title: testimonial.title[abbr],
-            body: testimonial.body[abbr],
             photo: <Photo photo={testimonial.photo} see={see} title={`${form.testimonial_photo}: ${testimonial.name}`} />,
             action: <Action props={props} resource='testimonials' item={testimonial} />,
         });
@@ -41,7 +40,6 @@ const ManageTestimonialsPage = () => {
     const fields = [
         { name: form.name, key: 'name' },
         { name: form.title, key: 'title' },
-        { name: form.body, key: 'body' },
         { name: form.photo, key: 'photo' },
         { name: action, key: 'action', fixed: true }
     ]

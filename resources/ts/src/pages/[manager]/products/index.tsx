@@ -1,7 +1,8 @@
 import { ShoppingBagIcon } from '@heroicons/react/24/outline'
 
 import { useContentContext } from '../../../app/contexts/content'
-import { convertDate, updateObject } from '../../../app/helpers/utils'
+import { useLanguageContext } from '../../../app/contexts/language'
+import { convertDate, htmlEntities, updateObject } from '../../../app/helpers/utils'
 import { useAppDispatch, useAppSelector } from '../../../app/hooks'
 import ProductType from '../../../app/types/models/product'
 
@@ -11,7 +12,6 @@ import ManageRead from '../../../components/backend/ui/page/read'
 
 import { selectAuth } from '../../../features/auth/authSlice'
 import { selectBackend, _delete } from '../../../features/backend/backendSlice'
-import { useLanguageContext } from '../../../app/contexts/language'
 
 const ManageProductsPage = () => {
     const dispatch = useAppDispatch()
@@ -32,7 +32,7 @@ const ManageProductsPage = () => {
         return updateObject(product, {
             created_at: convertDate(product.created_at),
             name: product.name[abbr],
-            description: product.description[abbr],
+            description: htmlEntities(product.description[abbr]),
             photo: <Photo photo={product.photo} see={see} title={`${form.product_photo}: ${product.name}`} />,
             action: <Action props={props} resource='products' item={product} />,
         });

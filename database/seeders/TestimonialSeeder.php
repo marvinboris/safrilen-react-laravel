@@ -19,7 +19,7 @@ class TestimonialSeeder extends Seeder
                 'name' => 'SONARA',
                 'title' => json_encode([
                     'fr' => 'Société Nationale de Raffinerie',
-                    'en' => 'Absolutely perfect!',
+                    'en' => 'National Refinery Company',
                 ]),
                 'photo' => 'logo-sonara.png',
                 'link' => 'https://sonara-cm.cm',
@@ -28,7 +28,7 @@ class TestimonialSeeder extends Seeder
                 'name' => 'ANTIC',
                 'title' => json_encode([
                     'fr' => 'Agence Nationale des TIC',
-                    'en' => 'Best decision ever',
+                    'en' => 'National ICT Agency',
                 ]),
                 'photo' => 'logo-antic.png',
                 'link' => 'https://antic.cm',

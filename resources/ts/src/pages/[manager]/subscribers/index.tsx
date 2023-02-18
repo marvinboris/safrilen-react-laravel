@@ -29,7 +29,6 @@ const ManagerFeaturesPage = () => {
     }));
 
     const fields = [
-        { name: form.first_name, key: 'firstName' },
         { name: form.email, key: 'email' },
         { name: form.created_at, key: 'created_at' },
         { name: action, key: 'action', fixed: true }

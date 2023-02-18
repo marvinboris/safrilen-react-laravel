@@ -13,6 +13,6 @@ class Subscriber extends Model
     protected $table = 'subscribers';
 
     public $fillable = [
-        'first_name', 'email', 'is_active',
+        'email', 'is_active',
     ];
 }

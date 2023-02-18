@@ -19,11 +19,11 @@ class PublicationSeeder extends Seeder
             [
                 'title' => json_encode([
                     'fr' => "Groupe électrogène",
-                    'en' => "Groupe électrogène",
+                    'en' => "Generator",
                 ]),
                 'description' => json_encode([
                     'fr' => "Ce qu'il faut savoir sur les groupes électrogènes",
-                    'en' => "Ce qu'il faut savoir sur les groupes électrogènes",
+                    'en' => "What you need to know about generators",
                 ]),
                 'body' => json_encode([
                     'fr' => "Un groupe électrogène est un dispositif autonome capable de produire de l'électricité.<br />  
@@ -34,18 +34,25 @@ class PublicationSeeder extends Seeder
                     <br />
                     Cet appareil a pour énergie de substitution le carburant car il a besoin de produire sa propre électricité en autonomie, celle-ci provenant d’un alternateur ou d’une génératrice. <br />
                     Dans les lieux importants comme les hôpitaux, les bases militaires, les aéroports… qui ne peuvent pas se permettre d’être en panne de courant, des modèles fixes de groupe électrogène sont présents.<br /> ",
-                    'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
+                    'en' => "A generator is a self-contained device capable of producing electricity.<br />
+                    <br />
+                    Most generators are made up of a heat engine that powers an alternator. Their size and weight can vary from a few kilograms to several tens of tons. <br />
+                    <br />
+                    Models of generating sets exist in three-phase. The generating set can be fixed or mobile. <br />
+                    <br />
+                    This device uses fuel as a substitute energy because it needs to produce its own electricity independently, coming from an alternator or a generator. <br />
+                    In important places such as hospitals, military bases, airports... which cannot afford to be out of power, fixed models of generator sets are present.<br />",
                 ]),
-                'photo' => "WhatsApp Image 2023-01-16 at 12.22.21 (3).jpeg"
+                'photo' => "FAQ_36_1-1339x1080.webp"
             ],
             [
                 'title' => json_encode([
                     'fr' => "Onduleurs solaires",
-                    'en' => "Onduleurs solaires",
+                    'en' => "Solar inverters",
                 ]),
                 'description' => json_encode([
                     'fr' => "Ce qu'il faut savoir sur les onduleurs solaires.",
-                    'en' => "Ce qu'il faut savoir sur les onduleurs solaires.",
+                    'en' => "What you need to know about solar inverters.",
                 ]),
                 'body' => json_encode([
                     'fr' => "Un <strong>onduleur solaire</strong> est un onduleur convertissant le courant continu de l'énergie photovoltaïque issue d'un panneau solaire en courant alternatif.<br /> 
@@ -66,18 +73,35 @@ class PublicationSeeder extends Seeder
                     De la même façon, l’onduleur hybride est capable de gérer les différentes sources d’énergie afin de déterminer quel type d’électricité utiliser à quel moment. Il est donc capable de choisir lui-même entre utiliser le réseau public de distribution d’électricité, la consommation directe de la production provenant des panneaux solaires ou bien l’électricité stockée dans des batteries.<br /> 
                     Les onduleurs solaires hybrides sont très intéressants à mettre en place, car ils permettent de gérer le plus intelligemment possible la production et la consommation. Il est alors plus facile de rentabiliser son installation solaire.</li> 
                     </ul>",
-                    'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
+                    'en' => "A <strong>solar inverter</strong> is an inverter that converts the direct current of photovoltaic energy from a solar panel into alternating current.<br />
+                    Choosing the right solar inverter is essential, because it has an impact on the electricity production of solar panels and their performance. <br />
+                    The solar inverter works permanently once it has been installed and programmed. It is part of the installation in addition to the solar panels and allows you to integrate storage batteries for your electricity production.<br />
+                    The purpose of the inverter is to optimize the production of electricity from a solar panel. To do this, it continuously analyzes the direct current emitted by the photovoltaic panels, as this continuously changes depending on various factors, such as sunshine for example.<br />
+                    It converts this energy and then transforms it into household current to power the network and electrical appliances. <br />
+                    It is also equipped with a microprocessor which ensures that the electric current produced complies with the standards imposed by the network manager.<br />
+                    <br />
+                    <span class='text-lg font-bold'>The different types of inverters for solar panels</span>
+                    <ul class='list-disc pl-4 space-y-3 mt-4'>
+                    <li>The <strong>micro-inverter</strong> <br />Also called module inverter, this is the solar inverter that is most often set up and used for private homes. Small in size, it is installed directly behind each solar panel to transform direct electricity into alternating current. Each panel therefore has its own inverter and is independent, which allows optimal production even in the event of a breakdown, and therefore greater scalability of the solar park.</li>
+                    <li>The <strong>String Inverter</strong> <br />This type of solar inverter collects and transforms the electricity supplied by several solar panels at the same time. More powerful, it allows to have only one inverter that manages several photovoltaic panels, which simplifies installation and maintenance.</li>
+                    <li>The <strong>central inverter</strong> <br />Like the string inverter, it is connected at the end of a series of photovoltaic panels. It is, however, more imposing and can manage several chains of panels. Its installation is preferred when the solar panel fleet begins to be important. It takes the form of a cabinet installed on the floor. It is particularly suitable for professional and industrial premises.</li>
+                    <li>The<strong>battery-powered inverter</strong><br />Some solar inverter models incorporate a storage battery. They store excess electricity for use when needed.</li>
+                    <li>The <strong>hybrid inverter</strong> <br />
+                    The latest generation of inverter, called \"hybrid\", is intelligent. Depending on the settings, it is able to determine itself whether the electricity produced should be used immediately, stored in a battery, or injected into the network. The box can be connected to the generator to provide backup power in the event of a power cut.<br />
+                    In the same way, the hybrid inverter is able to manage the different energy sources in order to determine which type of electricity to use at which time. He is therefore able to choose for himself between using the public electricity distribution network, direct consumption of production from solar panels or electricity stored in batteries.<br />
+                    Hybrid solar inverters are very interesting to set up, because they make it possible to manage production and consumption as intelligently as possible. It is then easier to make your solar installation profitable.</li>
+                    </ul>",
                 ]),
-                'photo' => "Onduleur-solaire.jpg"
+                'photo' => "H6d85000be8f941afab4b30e395068baaL.webp"
             ],
             [
                 'title' => json_encode([
                     'fr' => "Onduleurs électriques",
-                    'en' => "Onduleurs électriques",
+                    'en' => "Electric inverters",
                 ]),
                 'description' => json_encode([
                     'fr' => "Ce qu'il faut savoir sur les onduleurs électriques.",
-                    'en' => "Ce qu'il faut savoir sur les onduleurs électriques.",
+                    'en' => "What you need to know about power inverters.",
                 ]),
                 'body' => json_encode([
                     'fr' => "Un onduleur est un dispositif électronique de puissance permettant de générer des tensions et des courants alternatifs à partir d'une source d'énergie électrique continue. Il est indispensable pour protéger vos appareils contre les risques électriques comme les coupures de courant, les surtensions, les sous-tensions, sert principalement à pallier aux coupures de courant, mais ce n’est pas tout. <br />
@@ -95,9 +119,22 @@ class PublicationSeeder extends Seeder
                     <li>Filtrer et réguler la tension électrique pour que les appareils informatiques ne s'endommagent pas.</li>
                     </ul>
                     ",
-                    'en' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur debitis ea repellat ducimus et asperiores minus esse! Voluptate illum ullam explicabo veniam adipisci recusandae ipsa maxime natus eligendi voluptatum?",
+                    'en' => "An inverter is a power electronic device for generating alternating voltages and currents from a source of direct electrical energy. It is essential to protect your devices against electrical risks such as power cuts, overvoltages, undervoltages, mainly serves to compensate for power cuts, but that's not all. <br />
+                    <br />
+                    As soon as the UPS detects a sudden power cut, its batteries automatically take over and supply your equipment for a period corresponding to the autonomy. <br />
+                    <br />
+                    Initially, in the event of a power outage, the batteries of the inverter will supply energy to your devices for some time. The autonomy varies according to the capacity of the batteries and the power required. It takes over when there is a power outage. <br />
+                    In a second step, we must consider its continuous contributions. <br /><br />
+                    <span class='text-lg font-bold'>Main Inverter Functions</span>
+                    <ul class='list-disc pl-4 mt-4'>
+                    <li>Take over from the mains in the event of power outages</li>
+                    <li>Ensure the continuity of the electricity supply to the devices if the power failure persists,</li>
+                    <li>Protect the various machines, such as industrial devices, computer peripherals (printer, central unit, etc.) or even computers, in the event of repeated power cuts,</li>
+                    <li>Ensure the protection of the same devices listed above against lightning, micro-cuts, electrical noise and voltage variations, </li>
+                    <li>Filtering and regulating electrical voltage so that computing devices are not damaged.</li>
+                    </ul>",
                 ]),
-                'photo' => "05d8598fa4fa.webp"
+                'photo' => "Hee83a13857ed4203ade5c55a55119392q.webp"
             ],
         ];
 

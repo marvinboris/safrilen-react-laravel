@@ -1,7 +1,8 @@
 import { WrenchIcon } from '@heroicons/react/24/outline'
 
 import { useContentContext } from '../../../app/contexts/content'
-import { convertDate, updateObject } from '../../../app/helpers/utils'
+import { useLanguageContext } from '../../../app/contexts/language'
+import { convertDate, htmlEntities, updateObject } from '../../../app/helpers/utils'
 import { useAppDispatch, useAppSelector } from '../../../app/hooks'
 import ServiceType from '../../../app/types/models/service'
 
@@ -11,7 +12,6 @@ import ManageRead from '../../../components/backend/ui/page/read'
 
 import { selectAuth } from '../../../features/auth/authSlice'
 import { selectBackend, _delete } from '../../../features/backend/backendSlice'
-import { useLanguageContext } from '../../../app/contexts/language'
 
 const ManageServicesPage = () => {
     const dispatch = useAppDispatch()
@@ -32,7 +32,7 @@ const ManageServicesPage = () => {
         return updateObject(service, {
             created_at: convertDate(service.created_at),
             title: service.title[abbr],
-            body: service.body[abbr],
+            body: htmlEntities(service.body[abbr]),
             photo: <Photo photo={service.photo} see={see} title={`${form.service_photo}: ${service.title}`} />,
             action: <Action props={props} resource='services' item={service} />,
         });

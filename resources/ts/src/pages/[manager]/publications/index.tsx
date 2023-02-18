@@ -1,17 +1,18 @@
 import { ChatBubbleLeftEllipsisIcon } from '@heroicons/react/24/outline'
 
 import { useContentContext } from '../../../app/contexts/content'
-import { convertDate, updateObject } from '../../../app/helpers/utils'
+import { useLanguageContext } from '../../../app/contexts/language'
+import { convertDate, htmlEntities, updateObject } from '../../../app/helpers/utils'
 import { useAppDispatch, useAppSelector } from '../../../app/hooks'
 import PublicationType from '../../../app/types/models/publication'
 
-import Photo from '../../../components/backend/ui/list/photo'
 import Action from '../../../components/backend/ui/list/action'
+import Photo from '../../../components/backend/ui/list/photo'
+import Status from '../../../components/backend/ui/list/status'
 import ManageRead from '../../../components/backend/ui/page/read'
 
 import { selectAuth } from '../../../features/auth/authSlice'
 import { selectBackend, _delete } from '../../../features/backend/backendSlice'
-import { useLanguageContext } from '../../../app/contexts/language'
 
 const ManagePublicationsPage = () => {
     const dispatch = useAppDispatch()
@@ -33,8 +34,9 @@ const ManagePublicationsPage = () => {
             created_at: convertDate(publication.created_at),
             title: publication.title[abbr],
             description: publication.description[abbr],
-            body: publication.body[abbr],
+            body: htmlEntities(publication.body[abbr]),
             photo: <Photo photo={publication.photo} see={see} title={`${form.publication_photo}: ${publication.title}`} />,
+            is_active: <Status value={publication.is_active === 1} />,
             action: <Action props={props} resource='publications' item={publication} />,
         });
     });

@@ -74,10 +74,11 @@
                 "pages": {
                     "user": {
                         "login": {
-                            "title": "Bienvenue !",
-                            "sign_in": "Se connecter",
+                            "title": "Connexion Utilisateur",
+                            "sign_in": "Accédez à votre interface d&apos;administration",
                             "email_address": "Adresse mail",
-                            "password": "Mot de passe"
+                            "password": "Mot de passe",
+                            "continue": "Continuer"
                         }
                     },
                     "admin": {
@@ -447,7 +448,6 @@
                         "edit": "Modifier un abonné",
                         "index": "Liste des abonnés",
                         "form": {
-                            "first_name": "Prénom(s)",
                             "email": "Adresse mail",
                             "created_at": "Cr\u00e9\u00e9 le"
                         }
@@ -742,77 +742,78 @@
         "en": {
             "general": {
                 "date": "Date",
-                "time": "Heure",
-                "home": "Accueil",
+                "time": "Time",
+                "home": "Home",
                 "days": [
-                    "Dimanche",
-                    "Lundi",
-                    "Mardi",
-                    "Mercredi",
-                    "Jeudi",
-                    "Vendredi",
-                    "Samedi"
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday"
                 ],
                 "months": [
                     "Jan",
-                    "Fev",
+                    "Feb",
                     "Mar",
-                    "Avr",
-                    "Mai",
-                    "Jui",
+                    "Apr",
+                    "May",
+                    "Jun",
                     "Jul",
-                    "Aou",
+                    "Aug",
                     "Sep",
                     "Oct",
                     "Nov",
-                    "D\u00e9c"
+                    "Dec"
                 ]
             },
             "auth": {
                 "footer": {
-                    "copyrights": "Copyrights",
-                    "all_rights": "Tous droits r\u00e9serv\u00e9s par"
+                    "copyright": "Copyright",
+                    "all_rights": "All rights reserved by"
                 },
                 "messages": {
                     "admin": {
-                        "not_found": "Informations incorrectes.",
-                        "invalid": "Code de v\u00e9rification invalide.",
-                        "sent": "Code de v\u00e9rification envoy\u00e9 avec succ\u00e8s."
+                        "not_found": "Incorrect information.",
+                        "invalid": "Invalid verification code.",
+                        "sent": "Verification code sent successfully."
                     },
                     "user": {
-                        "inactive": "Votre compte n'est pas actif. Veuillez appeler l'administrateur.",
-                        "unauthorized": "Non autoris\u00e9",
-                        "sent": "Lien de r\u00e9initialisation envoy\u00e9 avec succ\u00e8s.",
-                        "reset": "Mot de passe r\u00e9initialis\u00e9 avec succ\u00e8s.",
-                        "failure": "Echec."
+                        "inactive": "Your account is not active. Please call the administrator.",
+                        "unauthorized": "Unauthorized",
+                        "sent": "Reset link sent successfully.",
+                        "reset": "Password successfully reset.",
+                        "failure": "Failed."
                     }
                 },
                 "pages": {
                     "user": {
                         "login": {
-                            "title": "Bienvenue !",
-                            "sign_in": "Se connecter",
-                            "email_address": "Adresse mail",
-                            "password": "Mot de passe"
+                            "title": "User Login",
+                            "sign_in": "Access your administration interface",
+                            "email_address": "Email address",
+                            "password": "Password",
+                            "continue": "Continue"
                         }
                     },
                     "admin": {
                         "login": {
-                            "sign_in_to": "Se connecter au",
-                            "sign_in": "Se connecter",
-                            "admin_panel": "Panneau de l'administrateur",
-                            "email_address": "Adresse mail",
-                            "password": "Mot de passe",
-                            "sms": "SMS",
-                            "email": "Adresse mail",
-                            "otp_method": "M\u00e9thode OTP"
+                            "sign_in_to": "Sign in to",
+                            "sign_in": "Sign in",
+                            "admin_panel": "Admin Panel",
+                            "email_address": "Email address",
+                            "password": "Password",
+                            "text": "text",
+                            "email": "Email address",
+                            "otp_method": "OTP Method"
                         },
                         "verify": {
-                            "enter": "Entrer",
-                            "verification_code": "Code de v\u00e9rification",
-                            "continue": "Continuer",
-                            "didnt_receive_code": "Aucun code re\u00e7u",
-                            "resend": "Renvoyer"
+                            "enter": "Enter",
+                            "verification_code": "Verification Code",
+                            "continue": "Continue",
+                            "didnt_receive_code": "No code received",
+                            "resend": "Resend"
                         }
                     }
                 }
@@ -820,57 +821,57 @@
             "backend": {
                 "header": {
                     "id": "ID",
-                    "sign_out": "Se d\u00e9connecter",
-                    "no_message": "Aucun message",
-                    "no_notification": "Aucune notification",
-                    "logout": "D\u00e9connexion",
-                    "close": "Fermer",
-                    "sure_logout": "\u00cates-vous s\u00fbr de vouloir vous d\u00e9connecter",
-                    "you_have": "Vous avez",
+                    "sign_out": "Sign Out",
+                    "no_message": "No message",
+                    "no_notification": "No notification",
+                    "logout": "Logout",
+                    "close": "Close",
+                    "sure_logout": "Are you sure you want to logout",
+                    "you_have": "You have",
                     "messages": "messages",
-                    "unread_message": "message non lu",
-                    "unread_notification": "notification non lue",
-                    "unread_messages": "messages non lus",
-                    "unread_notifications": "notifications non lues",
-                    "view_all_messages": "Voir tous les messages",
-                    "view_all_notifications": "Voir toutes les notifications"
+                    "unread_message": "unread message",
+                    "unread_notification": "unread notification",
+                    "unread_messages": "unread messages",
+                    "unread_notifications": "unread notifications",
+                    "view_all_messages": "View all messages",
+                    "view_all_notifications": "View all notifications"
                 },
                 "footer": {
                     "copyright": "Copyright",
-                    "all_rights": "Tous droits r\u00e9serv\u00e9s par"
+                    "all_rights": "All rights reserved by"
                 },
                 "sidebar": {
-                    "admin": "Administrateur",
-                    "user": "Utilisateur",
+                    "admin": "Administrator",
+                    "user": "User",
                     "menu": {
                         "dashboard": {
-                            "title": "Tableau de bord"
+                            "title": "Dashboard"
                         },
                         "admins": {
-                            "title": "Administrateurs",
-                            "add": "Ajouter un administrateur",
-                            "index": "Liste des administrateurs"
+                            "title": "Administrators",
+                            "add": "Add admin",
+                            "index": "List of administrators"
                         },
                         "users": {
-                            "title": "Utilisateurs",
-                            "add": "Ajouter un utilisateur",
-                            "index": "Liste des utilisateurs"
+                            "title": "Users",
+                            "add": "Add user",
+                            "index": "List of users"
                         },
                         "roles": {
-                            "title": "R\u00f4les",
-                            "add": "Ajouter un r\u00f4le",
-                            "index": "Liste des r\u00f4les"
+                            "title": "Roles",
+                            "add": "Add role",
+                            "index": "List of roles"
                         },
                         "features": {
-                            "title": "Fonctionnalit\u00e9s",
-                            "add": "Ajouter une fonctionnalit\u00e9",
-                            "index": "Liste des fonctionnalit\u00e9s"
+                            "title": "Features",
+                            "add": "Add feature",
+                            "index": "Feature List"
                         },
                         "cms": {
                             "title": "CMS",
                             "global": "Global",
-                            "general": "G\u00e9n\u00e9ral",
-                            "auth": "Authentification",
+                            "general": "General",
+                            "auth": "Authentication",
                             "backend": "Backend",
                             "frontend": "Frontend"
                         },
@@ -878,179 +879,179 @@
                             "title": "Notifications"
                         },
                         "settings": {
-                            "title": "Param\u00e8tres",
+                            "title": "Settings",
                             "cms": "CMS",
-                            "language": "Param\u00e8tres de langue"
+                            "language": "Language settings"
                         },
                         "services": {
                             "title": "Services",
-                            "add": "Ajouter un service",
-                            "index": "Liste des services"
+                            "add": "Add service",
+                            "index": "List of services"
                         },
                         "subscribers": {
-                            "title": "Abonnés",
-                            "add": "Ajouter un abonné",
-                            "index": "Liste des abonnés"
+                            "title": "Subscribers",
+                            "add": "Add subscriber",
+                            "index": "List of subscribers"
                         },
                         "products": {
-                            "title": "Produits",
-                            "add": "Ajouter un produit",
-                            "index": "Liste des produits"
+                            "title": "Products",
+                            "add": "Add product",
+                            "index": "List of products"
                         },
                         "publications": {
-                            "title": "Publications",
-                            "add": "Ajouter une publication",
-                            "index": "Liste des publications"
+                            "title": "Posts",
+                            "add": "Add post",
+                            "index": "List of posts"
                         },
                         "testimonials": {
-                            "title": "Témoignages",
-                            "add": "Ajouter un témoignage",
-                            "index": "Liste des témoignages"
+                            "title": "Testimonials",
+                            "add": "Add testimonial",
+                            "index": "List of testimonials"
                         },
                         "images": {
                             "title": "Images",
-                            "add": "Ajouter une image",
-                            "index": "Liste des images"
+                            "add": "Add image",
+                            "index": "List of images"
                         }
                     }
                 },
                 "components": {
                     "form": {
-                        "save": "Sauvegarder",
-                        "save_add": "Sauvegarder & ajouter",
-                        "selected_file": "Fichier s\u00e9lectionn\u00e9",
-                        "active": "Actif",
-                        "inactive": "Inactif"
+                        "save": "Save",
+                        "save_add": "Save & Add",
+                        "selected_file": "Selected File",
+                        "active": "Active",
+                        "inactive": "Inactive"
                     },
                     "list": {
                         "action": "Action",
-                        "all": "Tous",
-                        "first": "Premi\u00e8re",
-                        "last": "Derni\u00e8re",
-                        "loading": "Chargement en cours",
-                        "print": "Imprimer",
+                        "all": "All",
+                        "first": "First",
+                        "last": "Last",
+                        "loading": "Loading",
+                        "print": "Print",
                         "pdf": "PDF",
                         "csv": "CSV",
                         "excel": "Excel",
-                        "search": "Rechercher",
-                        "see": "Voir",
-                        "show": "Afficher",
+                        "search": "Search",
+                        "see": "See",
+                        "show": "Show",
                         "sl": "SL",
-                        "showing": "Affichant",
-                        "from": "sur",
+                        "showing": "Showing",
+                        "from": "on",
                         "entries": {
-                            "singular": "entr\u00e9e",
-                            "plural": "entr\u00e9es"
+                            "singular": "entrance",
+                            "plural": "entries"
                         }
                     }
                 },
                 "messages": {
                     "admins": {
-                        "not_found": "Administrateur introuvable.",
-                        "created": "Administrateur cr\u00e9\u00e9 avec succ\u00e8s.",
-                        "updated": "Administrateur modifi\u00e9 avec succ\u00e8s.",
-                        "deleted": "Administrateur supprim\u00e9 avec succ\u00e8s."
+                        "not_found": "Administrator not found.",
+                        "created": "Administrator created successfully.",
+                        "updated": "Administrator successfully updated.",
+                        "deleted": "Administrator successfully deleted."
                     },
                     "users": {
-                        "not_found": "Utilisateur introuvable.",
-                        "created": "Utilisateur cr\u00e9\u00e9 avec succ\u00e8s.",
-                        "updated": "Utilisateur modifi\u00e9 avec succ\u00e8s.",
-                        "deleted": "Utilisateur supprim\u00e9 avec succ\u00e8s."
+                        "not_found": "User not found.",
+                        "created": "User created successfully.",
+                        "updated": "User successfully updated.",
+                        "deleted": "User successfully deleted."
                     },
                     "roles": {
-                        "not_found": "R\u00f4le introuvable.",
-                        "created": "R\u00f4le cr\u00e9\u00e9 avec succ\u00e8s.",
-                        "updated": "R\u00f4le modifi\u00e9 avec succ\u00e8s.",
-                        "deleted": "R\u00f4le supprim\u00e9 avec succ\u00e8s."
+                        "not_found": "Rule not found.",
+                        "created": "Rule successfully created.",
+                        "updated": "Rule successfully updated.",
+                        "deleted": "Rule successfully deleted."
                     },
                     "features": {
-                        "not_found": "Fonctionnalit\u00e9 introuvable.",
-                        "created": "Fonctionnalit\u00e9 cr\u00e9\u00e9e avec succ\u00e8s.",
-                        "updated": "Fonctionnalit\u00e9 modifi\u00e9e avec succ\u00e8s.",
-                        "deleted": "Fonctionnalit\u00e9 supprim\u00e9e avec succ\u00e8s."
+                        "not_found": "Feature not found.",
+                        "created": "Feature created successfully.",
+                        "updated": "Feature successfully updated.",
+                        "deleted": "Feature successfully removed."
                     },
                     "notifications": {
-                        "not_found": "Notification introuvable."
+                        "not_found": "Notification not found."
                     },
                     "cms": {
-                        "not_found": "Contenu introuvable.",
-                        "updated": "Contenu modifi\u00e9 avec succ\u00e8s."
+                        "not_found": "Content not found.",
+                        "updated": "Content updated successfully."
                     },
                     "settings": {
-                        "not_found": "Param\u00e8tre introuvable.",
-                        "created": "Param\u00e8tre cr\u00e9\u00e9 avec succ\u00e8s.",
-                        "updated": "Param\u00e8tre modifi\u00e9 avec succ\u00e8s.",
-                        "deleted": "Param\u00e8tre supprim\u00e9 avec succ\u00e8s."
+                        "not_found": "Parameter not found.",
+                        "created": "Setting successfully created.",
+                        "updated": "Setting successfully changed.",
+                        "deleted": "Setting successfully deleted."
                     },
                     "services": {
-                        "not_found": "Service introuvable.",
-                        "created": "Service cr\u00e9\u00e9 avec succ\u00e8s.",
-                        "updated": "Service modifi\u00e9 avec succ\u00e8s.",
-                        "deleted": "Service supprim\u00e9 avec succ\u00e8s."
+                        "not_found": "Service not found.",
+                        "created": "Service created successfully.",
+                        "updated": "Service updated successfully.",
+                        "deleted": "Service deleted successfully."
                     },
                     "subscribers": {
-                        "not_found": "Abonné introuvable.",
-                        "created": "Abonné cr\u00e9\u00e9 avec succ\u00e8s.",
-                        "updated": "Abonné modifi\u00e9 avec succ\u00e8s.",
-                        "deleted": "Abonné supprim\u00e9 avec succ\u00e8s."
+                        "not_found": "Subscriber not found.",
+                        "created": "Subscriber created successfully.",
+                        "updated": "Subscriber successfully updated.",
+                        "deleted": "Subscriber successfully deleted."
                     },
                     "products": {
-                        "not_found": "Produit introuvable.",
-                        "created": "Produit cr\u00e9\u00e9 avec succ\u00e8s.",
-                        "updated": "Produit modifi\u00e9 avec succ\u00e8s.",
-                        "deleted": "Produit supprim\u00e9 avec succ\u00e8s."
+                        "not_found": "Product not found.",
+                        "created": "Product created successfully.",
+                        "updated": "Product successfully updated.",
+                        "deleted": "Product successfully deleted."
                     },
                     "publications": {
-                        "not_found": "Publication introuvable.",
-                        "created": "Publication cr\u00e9\u00e9e avec succ\u00e8s.",
-                        "updated": "Publication modifi\u00e9e avec succ\u00e8s.",
-                        "deleted": "Publication supprim\u00e9e avec succ\u00e8s."
+                        "not_found": "Post not found.",
+                        "created": "Post successfully created.",
+                        "updated": "Post successfully updated.",
+                        "deleted": "Post successfully deleted."
                     },
                     "testimonials": {
-                        "not_found": "Témoignage introuvable.",
-                        "created": "Témoignage cr\u00e9\u00e9 avec succ\u00e8s.",
-                        "updated": "Témoignage modifi\u00e9 avec succ\u00e8s.",
-                        "deleted": "Témoignage supprim\u00e9 avec succ\u00e8s."
+                        "not_found": "Testimonial not found.",
+                        "created": "Testimonial successfully created.",
+                        "updated": "Testimonial successfully updated.",
+                        "deleted": "Testimonial successfully deleted."
                     },
                     "images": {
-                        "not_found": "Image introuvable.",
-                        "created": "Image cr\u00e9\u00e9e avec succ\u00e8s.",
-                        "updated": "Image modifi\u00e9e avec succ\u00e8s.",
-                        "deleted": "Image supprim\u00e9e avec succ\u00e8s."
+                        "not_found": "Image not found.",
+                        "created": "Image created successfully.",
+                        "updated": "Image successfully updated.",
+                        "deleted": "Image successfully deleted."
                     }
                 },
                 "pages": {
                     "dashboard": {
                         "admin": {
-                            "title": "Panneau de l'administrateur",
-                            "subtitle": "Tableau de bord",
+                            "title": "Admin Panel",
+                            "subtitle": "Dashboard",
                             "blocks": {
-                                "users": "Utilisateurs",
-                                "testimonials": "Témoignages",
+                                "users": "Users",
+                                "testimonials": "Testimonials",
                                 "services": "Services",
                                 "images": "Images"
                             }
                         },
                         "user": {
-                            "title": "Panneau de l'utilisateur",
-                            "subtitle": "Tableau de bord",
+                            "title": "User Panel",
+                            "subtitle": "Dashboard",
                             "blocks": {
-                                "users": "Utilisateurs",
-                                "testimonials": "Témoignages",
+                                "users": "Users",
+                                "testimonials": "Testimonials",
                                 "services": "Services",
                                 "images": "Images"
                             },
                             "general_report": {
                                 "title": "General",
                                 "subtitle": "General",
-                                "testimonials": "Témoignages",
-                                "total_publications": "Publications au total"
+                                "testimonials": "Testimonials",
+                                "total_posts": "Total posts"
                             }
                         }
                     },
                     "cms": {
                         "title": "CMS",
-                        "global": "Global",
+                        "global": "global",
                         "general": "General",
                         "messages": "Messages",
                         "frontend": "Frontend",
@@ -1059,172 +1060,171 @@
                         "auth": "Auth",
                         "form": {
                             "logo": "Logo",
-                            "app_name": "Nom de l'application",
-                            "company_name": "Nom de l'entreprise",
-                            "company_logo": "Logo de l'entreprise"
+                            "app_name": "App Name",
+                            "company_name": "Company name",
+                            "company_logo": "Company Logo"
                         }
                     },
                     "admins": {
-                        "title": "Administrateurs",
-                        "add": "Ajouter un administrateur",
-                        "edit": "Modifier un administrateur",
-                        "index": "Liste des administrateurs",
+                        "title": "Administrators",
+                        "add": "Add admin",
+                        "edit": "Edit an administrator",
+                        "index": "List of administrators",
                         "form": {
-                            "name": "Nom de l'administrateur",
-                            "full_name": "Nom complet",
-                            "phone": "Num\u00e9ro de t\u00e9l\u00e9phone",
-                            "password": "Mot de passe",
-                            "password_confirmation": "Confirmation de mot de passe",
-                            "email": "Adresse mail",
-                            "admin_photo": "Photo de l'administrateur",
-                            "photo": "Photo"
+                            "name": "Administrator name",
+                            "full_name": "Full name",
+                            "phone": "Phone Number",
+                            "password": "Password",
+                            "password_confirmation": "Password confirmation",
+                            "email": "Email address",
+                            "admin_photo": "Admin Photo",
+                            "picture": "Picture"
                         }
                     },
                     "users": {
-                        "title": "Utilisateurs",
-                        "add": "Ajouter un utilisateur",
-                        "edit": "Modifier un utilisateur",
-                        "index": "Liste des utilisateurs",
+                        "title": "Users",
+                        "add": "Add User",
+                        "edit": "Edit User",
+                        "index": "List of users",
                         "form": {
-                            "name": "Nom de l'utilisateur",
-                            "full_name": "Nom complet",
-                            "phone": "Num\u00e9ro de t\u00e9l\u00e9phone",
-                            "password": "Mot de passe",
-                            "password_confirmation": "Confirmation de mot de passe",
-                            "email": "Adresse mail",
-                            "role": "R\u00f4le",
-                            "select_role": "S\u00e9lectionner un r\u00f4le",
-                            "user_photo": "Photo de l'utilisateur",
-                            "photo": "Photo"
+                            "name": "User name",
+                            "full_name": "Full name",
+                            "phone": "Phone Number",
+                            "password": "Password",
+                            "password_confirmation": "Password confirmation",
+                            "email": "Email address",
+                            "role": "Role",
+                            "select_role": "Select Role",
+                            "user_photo": "User photo",
+                            "picture": "Picture"
                         }
                     },
                     "roles": {
-                        "title": "R\u00f4les",
-                        "add": "Ajouter un r\u00f4le",
-                        "edit": "Modifier un r\u00f4le",
-                        "index": "Liste des r\u00f4les",
+                        "title": "Roles",
+                        "add": "Add role",
+                        "edit": "Edit role",
+                        "index": "List of roles",
                         "form": {
-                            "name": "Nom",
+                            "name": "Name",
                             "description": "Description",
-                            "features": "Fonctionnalit\u00e9s",
-                            "created_at": "Cr\u00e9\u00e9 le",
-                            "create": "Cr\u00e9er",
-                            "update": "Modifier",
-                            "delete": "Supprimer"
+                            "features": "Features",
+                            "created_at": "Created at",
+                            "create": "Create",
+                            "update": "Edit",
+                            "delete": "Delete"
                         }
                     },
                     "features": {
-                        "title": "Fonctionnalit\u00e9s",
-                        "add": "Ajouter une fonctionnalit\u00e9",
-                        "edit": "Modifier une fonctionnalit\u00e9",
-                        "index": "Liste des fonctionnalit\u00e9s",
+                        "title": "Features",
+                        "add": "Add feature",
+                        "edit": "Edit a feature",
+                        "index": "Feature list",
                         "form": {
-                            "name": "Nom",
-                            "prefix": "Pr\u00e9fixe",
-                            "created_at": "Cr\u00e9\u00e9e le"
+                            "name": "Name",
+                            "prefix": "Prefix",
+                            "created_at": "Created at"
                         }
                     },
                     "notifications": {
                         "title": "Notifications",
-                        "show": "D\u00e9tails des notifications",
-                        "index": "Liste des notifications",
+                        "show": "Notification details",
+                        "index": "List of notifications",
                         "form": {
-                            "you_have_no_notification": "Vous n'avez pas de notification."
+                            "you_have_no_notification": "You have no notification."
                         }
                     },
                     "settings": {
-                        "title": "Param\u00e8tres",
-                        "subtitle": "Param\u00e8tres du compte",
+                        "title": "Settings",
+                        "subtitle": "Account Settings",
                         "language": {
-                            "title": "Param\u00e8tres de langue",
+                            "title": "Language Settings",
                             "form": {
-                                "select_language": "S\u00e9lectionner une langue"
+                                "select_language": "Select a language"
                             }
                         }
                     },
                     "services": {
                         "title": "Services",
-                        "add": "Ajouter un service",
-                        "edit": "Modifier un service",
-                        "index": "Liste des services",
+                        "add": "Add service",
+                        "edit": "Edit a service",
+                        "index": "List of services",
                         "form": {
-                            "title": "Titre",
-                            "body": "Contenu",
-                            "photo": "Photo",
-                            "service_photo": "Photo du service",
-                            "is_active": "Statut",
-                            "select_status": "S\u00e9lectionner le statut",
-                            "created_at": "Cr\u00e9\u00e9 le"
+                            "title": "Title",
+                            "body": "Content",
+                            "picture": "Picture",
+                            "service_photo": "Service photo",
+                            "is_active": "Status",
+                            "select_status": "Select status",
+                            "created_at": "Created at"
                         }
                     },
                     "subscribers": {
-                        "title": "Abonnés",
-                        "add": "Ajouter un abonné",
-                        "edit": "Modifier un abonné",
-                        "index": "Liste des abonnés",
+                        "title": "Subscribers",
+                        "add": "Add subscriber",
+                        "edit": "Edit a subscriber",
+                        "index": "List of subscribers",
                         "form": {
-                            "first_name": "Prénom(s)",
-                            "email": "Adresse mail",
-                            "created_at": "Cr\u00e9\u00e9 le"
+                            "email": "Email address",
+                            "created_at": "Created at"
                         }
                     },
                     "products": {
-                        "title": "Produits",
-                        "add": "Ajouter un produit",
-                        "edit": "Modifier un produit",
-                        "index": "Liste des produits",
+                        "title": "Products",
+                        "add": "Add product",
+                        "edit": "Edit a product",
+                        "index": "List of products",
                         "form": {
-                            "name": "Nom",
+                            "name": "Name",
                             "description": "Description",
-                            "price": "Prix",
-                            "photo": "Photo",
-                            "product_photo": "Photo du produit",
-                            "is_active": "Statut",
-                            "select_status": "S\u00e9lectionner le statut",
-                            "created_at": "Cr\u00e9\u00e9 le"
+                            "price": "Price",
+                            "picture": "Picture",
+                            "product_photo": "Product photo",
+                            "is_active": "Status",
+                            "select_status": "Select status",
+                            "created_at": "Created at"
                         }
                     },
                     "publications": {
-                        "title": "Publications",
-                        "add": "Ajouter une publication",
-                        "edit": "Modifier une publication",
-                        "index": "Liste des publications",
+                        "title": "Posts",
+                        "add": "Add post",
+                        "edit": "Edit a post",
+                        "index": "List of posts",
                         "form": {
-                            "title": "Titre",
+                            "title": "Title",
                             "description": "Description",
-                            "body": "Contenu",
-                            "photo": "Photo",
-                            "publication_photo": "Photo du publication",
-                            "is_active": "Statut",
-                            "select_status": "S\u00e9lectionner le statut",
-                            "created_at": "Cr\u00e9\u00e9 le"
+                            "body": "Content",
+                            "picture": "Picture",
+                            "post_photo": "Post photo",
+                            "is_active": "Status",
+                            "select_status": "Select status",
+                            "created_at": "Created at"
                         }
                     },
                     "testimonials": {
-                        "title": "Témoignages",
-                        "add": "Ajouter un témoignage",
-                        "edit": "Modifier un témoignage",
-                        "index": "Liste des témoignages",
+                        "title": "Testimonials",
+                        "add": "Add testimonial",
+                        "edit": "Edit a testimonial",
+                        "index": "List of testimonials",
                         "form": {
-                            "name": "Nom",
-                            "title": "Titre",
-                            "body": "Contenu",
-                            "photo": "Photo",
-                            "testimony_photo": "Photo du témoignage",
-                            "is_active": "Statut",
-                            "select_status": "S\u00e9lectionner le statut",
-                            "created_at": "Cr\u00e9\u00e9 le"
+                            "name": "Name",
+                            "title": "Title",
+                            "body": "Content",
+                            "picture": "Picture",
+                            "testimony_photo": "Testimony Photo",
+                            "is_active": "Status",
+                            "select_status": "Select status",
+                            "created_at": "Created at"
                         }
                     },
                     "images": {
                         "title": "Images",
-                        "add": "Ajouter une image",
-                        "edit": "Modifier une image",
-                        "index": "Liste des images",
+                        "add": "Add image",
+                        "edit": "Edit an image",
+                        "index": "List of images",
                         "form": {
-                            "src": "Lien",
-                            "photo": "Photo",
-                            "created_at": "Cr\u00e9\u00e9 le"
+                            "src": "Link",
+                            "picture": "Picture",
+                            "created_at": "Created at"
                         }
                     }
                 }
@@ -1232,223 +1232,224 @@
             "frontend": {
                 "header": {
                     "menu": {
-                        "about": "Société",
+                        "about": "Company",
                         "services": "Services",
-                        "products": "Produits",
+                        "products": "Products",
                         "blog": "Blog",
                         "contact": "Contact",
-                        "quote": "Devis"
+                        "quote": "Quote"
                     }
                 },
                 "footer": {
                     "top": {
                         "navigation": {
                             "head": "Safrilen",
-                            "title": "Notre entreprise",
+                            "title": "Our company",
                             "menu": {
-                                "about": "Société",
-                                "products": "Produits",
+                                "about": "Company",
+                                "products": "Products",
                                 "services": "Services",
                                 "contact": "Contact"
                             }
                         },
                         "contact": {
-                            "head": "Gardez contact",
+                            "head": "Keep in touch",
                             "title": "Contact",
-                            "address": "Bonapriso, BP: 5055 Douala<br />Bastos, BP: 10100 Yaoundé Cameroun"
+                            "address": "Bonapriso, BP: 5055 Douala<br />Bastos, BP: 10100 Yaoundé Cameroon"
                         },
                         "services": {
-                            "head": "Nous proposons",
-                            "title": "Nos services"
+                            "head": "We offer",
+                            "title": "Our Services"
                         }
                     },
                     "bottom": {
-                        "all_rights": "Tous droits r\u00e9serv\u00e9s par"
+                        "all_rights": "All rights reserved by"
                     }
                 },
                 "components": {
                     "form": {
-                        "loading": "Chargement en cours"
+                        "loading": "Loading"
                     },
                     "section": {
-                        "read_more": "Lire plus"
+                        "read_more": "Read more"
                     },
                     "service_block": {
-                        "read_more": "En savoir plus"
+                        "read_more": "Read more"
                     },
                     "quote": {
-                        "title": "Obtenez un devis",
+                        "title": "Get a quote",
+                        "subtitle": "Do whatever you want!",
                         "form": {
-                            "company": "Entreprise",
-                            "first_name": "Prénom(s)",
-                            "last_name": "Nom(s)",
-                            "email": "Mail",
+                            "first_name": "First name",
+                            "last_name": "Last name",
+                            "email": "Email address",
                             "phone": "123 456 789",
-                            "address": "Adresse",
-                            "select_service": "Sélectionner un service",
-                            "comment": "Détails supplémentaires",
-                            "continue": "Valider"
+                            "address": "Address",
+                            "select_service": "Select service",
+                            "date": "Date of visit",
+                            "comment": "Additional details",
+                            "continue": "Continue"
                         }
                     },
                     "solutions": [
-                        "Gestion stratégique de l'énergie",
-                        "Contrôle, diagnostic et maintenance des installations",
-                        "Recyclage de l'énergie",
-                        "Equipement de protection individuelle",
-                        "Service après vente"
+                        "Collection and diagnosis of energy needs",
+                        "Tailored technical and commercial proposal",
+                        "Installation and Training",
+                        "Individual protection equipment",
+                        "After-sales service / maintenance"
                     ]
                 },
                 "messages": {
                     "contact": {
-                        "success": "Formulaire soumis.",
-                        "failure": "Echec."
+                        "success": "Form submitted.",
+                        "failure": "Failed."
                     },
                     "quote": {
-                        "success": "Formulaire soumis.",
-                        "failure": "Echec."
+                        "success": "Form submitted.",
+                        "failure": "Failed."
                     },
                     "newsletter": {
-                        "success": "Formulaire soumis.",
-                        "failure": "Echec."
+                        "success": "Form submitted.",
+                        "failure": "Failed."
                     }
                 },
                 "pages": {
                     "home": {
                         "banner": {
-                            "title": "L’ÉNERGIE POUR TOUS !",
-                            "subtitle": "Une alimentation efficace en électricité pour tous vos projets."
+                            "title": "ENERGY FOR ALL!",
+                            "subtitle": "An efficient power supply for all your projects."
                         },
                         "services": {
-                            "head": "Comment vous aider",
-                            "title": "Nos services",
-                            "view_all": "Découvrez tous nos services"
+                            "head": "How to help you",
+                            "title": "Our services",
+                            "view_all": "Discover all our services"
                         },
                         "solutions": {
-                            "head": "Vos problèmes résolus",
-                            "title": "Nos solutions"
+                            "head": "Your problems solved",
+                            "title": "Our process"
                         },
                         "testimonials": {
-                            "head": "Des opinions sur nos prestations",
-                            "title": "Ils nous ont fait confiance"
+                            "head": "Opinions on our services",
+                            "title": "They trusted us"
                         },
                         "publications": {
-                            "head": "Dernières nouvelles",
+                            "head": "Latest news",
                             "title": "Blog",
-                            "view_all": "Découvrez toutes nos publications"
+                            "view_all": "Discover all our publications"
                         },
                         "about": {
-                            "head": "A propos de Safrilen",
-                            "title": "Bienvenue chez Safrilen",
-                            "description": "Entreprise spécialisée dans la fourniture, l'installation et la maintenance d'équipements fournisseurs d'énergie électrique et solaire.<br /><br /><strong>SAFRILEN</strong> vous accompagne pour une alimentation efficace en énergie pour tous vos projets.",
+                            "head": "About Safrilen",
+                            "title": "Welcome to Safrilen",
+                            "description": "Company specializing in the supply, installation and maintenance of electrical and solar energy supplier equipment.<br /><br /><strong>SAFRILEN</strong> accompanies you for an efficient power supply in energy for all your projects.",
                             "services": [
-                                "Fourniture de matériel électrique",
-                                "Maintenance de matériel électrique",
-                                "Service après vente"
+                                "Supply of electrical equipment",
+                                "Maintenance of electrical equipment",
+                                "After sales service"
                             ],
-                            "read_more": "En savoir plus"
+                            "read_more": "Read more"
                         }
                     },
                     "about": {
-                        "title": "A propos",
-                        "subtitle": "Qui sommes-nous?",
-                        "description": "Tout savoir sur Safrilen: sa mission, ses objectifs ainsi que sa vision.",
+                        "title": "About",
+                        "subtitle": "Who are we?",
+                        "description": "All about Safrilen: its mission, its objectives and its vision.",
                         "contact": {
-                            "head": "Retrouvez-nous",
+                            "head": "Find us",
                             "title": "Contact",
-                            "address": "Bonapriso, BP: 5055 Douala<br />Bastos, BP: 10100 Yaoundé Cameroun"
+                            "address": "Bonapriso, BP: 5055 Douala<br />Bastos, BP: 10100 Yaoundé Cameroon"
                         },
                         "services": {
-                            "head": "Comment vous aider",
-                            "title": "Nos services",
-                            "view_all": "Découvrez tous nos services"
+                            "head": "How to help you",
+                            "title": "Our services",
+                            "view_all": "Discover all our services"
                         },
                         "newsletter": {
                             "head": "Newsletter",
-                            "title": "Inscrivez-vous",
-                            "description": "Recevez régulièrement des conseils de notre équipe d'experts.",
+                            "title": "Register",
+                            "description": "Receive regular advice from our team of experts.",
                             "form": {
-                                "first_name": "Prénom(s)",
-                                "email": "Adresse mail",
-                                "submit": "Soumettre"
+                                "first_name": "First name",
+                                "email": "Email address",
+                                "submit": "Submit"
                             }
                         },
                         "about": {
-                            "head": "Qui sommes-nous?",
-                            "title": "A propos de Safrilen",
-                            "description": "Entreprise spécialisée dans la fourniture, l'installation et la maintenance d'équipements fournisseurs d'énergie électrique et solaire.<br /><br /><strong>SAFRILEN</strong> vous accompagne pour une alimentation efficace en énergie pour tous vos projets.",
-                            "expertise": "Grâce à notre équipe d'experts commerciales et techniques qualifiés que nous déployons sur site, nous vous apportons une solution sur-mesure adaptée à vos besoins.<br /></br />Pour un suivi efficace et une bonne productivité, nous mettons en place des formations afin d'accompagner vos collaborateurs et nous réalisons également l'installation, la maintenance et le dépannage des équipements fournis.",
+                            "head": "Who are we?",
+                            "title": "About Safrilen",
+                            "description": "Company specializing in the supply, installation and maintenance of electrical and solar energy supplier equipment.<br /><br /><strong>SAFRILEN</strong> accompanies you for an efficient power supply in energy for all your projects.",
+                            "expertise": "Thanks to our team of qualified commercial and technical experts that we deploy on site, we provide you with a tailor-made solution adapted to your needs.<br /></br />For effective monitoring and good productivity, we set up training to support your employees and we also carry out the installation, maintenance and repair of the equipment provided.",
                             "strengths": {
-                                "title": "Nos atouts",
+                                "title": "Our strengths",
                                 "items": [
-                                    "Un interlocuteur unique",
-                                    "Un service sur-mesure",
-                                    "Accompagnement et suivi technique et commercial"
+                                    "A single interlocutor",
+                                    "A tailor-made service",
+                                    "A support and a technical and commercial follow-up"
                                 ]
                             },
                             "goal": {
-                                "title": "Notre objectif",
+                                "title": "Our goal",
                                 "items": [
-                                    "Optimiser votre offre énergétique",
-                                    "Une équipe capable d'analyser et d'élaborer des offres sur-mesure"
+                                    "Optimize your energy offer",
+                                    "Provide you with a team capable of analyzing and developing tailor-made offers"
                                 ]
                             },
                             "follow": {
-                                "title": "Notre suivi client",
-                                "body": "Dans le but d’améliorer de façon permanente nos services, nous vous ferons bénéficier de nouveaux produits, de nouvelles offres, toujours plus innovantes et plus compétitives."
+                                "title": "Our customer follow-up",
+                                "body": "In order to permanently improve our services, we will make you benefit from new products, new offers, always more innovative and more competitive."
                             }
                         }
                     },
                     "contact": {
-                        "title": "N'hésitez pas à nous contacter",
-                        "subtitle": "Contactez-nous",
-                        "description": "Choisissez comment vous voulez entrer en contact avec Safrilen.",
+                        "title": "Do not hesitate to contact us",
+                        "subtitle": "Contact Us",
+                        "description": "Choose how you want to get in touch with Safrilen.",
                         "contact": {
-                            "head": "Pour plus d'informations",
+                            "head": "For more information",
                             "title": "Safrilen",
-                            "address": "Bonapriso, BP: 5055 Douala<br />Bastos, BP: 10100 Yaoundé Cameroun"
+                            "address": "Bonapriso, BP: 5055 Douala<br />Bastos, BP: 10100 Yaoundé Cameroon"
                         },
                         "form": {
-                            "head": "Formulaire de contact",
-                            "title": "N'hésitez pas",
-                            "description": "Un souci d'installation, de maintenance, au bureau, à la maison ou ailleurs ? Bénéficiez de notre expertise.",
-                            "name": "Nom",
-                            "email": "E-mail",
-                            "subject": "Objet",
+                            "head": "Inquiry Form",
+                            "title": "Don't hesitate",
+                            "description": "For any questions or information, <br />please fill out this inquiry form.",
+                            "name": "Name",
+                            "email": "Email",
+                            "subject": "Subject",
                             "message": "Message",
-                            "submit": "Soumettre"
+                            "submit": "Submit"
                         }
                     },
                     "services": {
                         "title": "Services",
-                        "subtitle": "Nos services",
-                        "description": "Tous les services de Safrilen.",
+                        "subtitle": "Our services",
+                        "description": "All Safrilen services.",
                         "services": {
-                            "head": "Comment pouvons-nous vous aider",
-                            "title": "Tous nos services"
+                            "head": "How can we help you",
+                            "title": "All our services"
                         },
                         "solutions": {
-                            "head": "Vos problèmes résolus",
-                            "title": "Nos solutions"
+                            "head": "Your problems solved",
+                            "title": "Our process"
                         }
                     },
                     "publications": {
                         "title": "Blog",
-                        "subtitle": "Nos publications",
-                        "description": "Tous les publications de Safrilen.",
-                        "search": "Rechercher",
-                        "recent": "Publications récentes",
+                        "subtitle": "Our posts",
+                        "description": "All posts from Safrilen.",
+                        "search": "Search",
+                        "recent": "Recent posts",
                         "publications": {
-                            "head": "Le blog de Safrilen",
-                            "title": "Toutes nos publications"
+                            "head": "Safrilen's Blog",
+                            "title": "All our publications"
                         }
                     },
                     "products": {
-                        "title": "Produits",
-                        "subtitle": "Nos produits",
-                        "description": "Tous les produits de Safrilen.",
+                        "title": "Products",
+                        "subtitle": "Our products",
+                        "description": "All Safrilen products.",
                         "products": {
-                            "head": "Ce qu'il vous faut",
-                            "title": "Tous nos produits"
+                            "head": "What you need",
+                            "title": "All our products"
                         }
                     }
                 }

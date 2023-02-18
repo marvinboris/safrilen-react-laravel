@@ -10,7 +10,6 @@ use Illuminate\Http\Request;
 class SubscriberController extends Controller
 {
     private $rules = [
-        'name' => 'required|string',
         'email' => 'required|email',
         'is_active' => 'required|integer',
     ];
@@ -33,8 +32,7 @@ class SubscriberController extends Controller
             ->when($search, function ($query, $search) {
                 if ($search !== "")
                     $query
-                        ->where('subscribers.email', 'LIKE', "%$search%")
-                        ->orWhere('subscribers.name', 'LIKE', "%$search%");
+                        ->orWhere('subscribers.email', 'LIKE', "%$search%");
             });
 
         $total = $filteredData->count();

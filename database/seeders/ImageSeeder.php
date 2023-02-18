@@ -18,7 +18,7 @@ class ImageSeeder extends Seeder
         $images = [
             ['photo' => "riccardo-annandale-7e2pe9wjL9M-unsplash.jpg",],
             ['photo' => "anders-j-hxUcl0nUsIY-unsplash.jpg",],
-            ['photo' => "danilo-alvesd-AzqJSCPkZkI-unsplash.jpg",],
+            ['photo' => "nuno-marques-0GbrjL3vZF4-unsplash.jpg",],
             ['photo' => "emmanuel-ikwuegbu-_2AlIm-F6pw-unsplash.jpg",],
             ['photo' => "alexandre-debieve-FO7JIlwjOtU-unsplash.jpg",],
             ['photo' => "john-barkiple-l090uFWoPaI-unsplash.jpg",],

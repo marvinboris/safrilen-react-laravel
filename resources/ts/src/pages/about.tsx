@@ -195,7 +195,7 @@ const AboutPage = () => {
 
                         {message && <Alert className='mb-4' color={message.type}>{message.content}</Alert>}
 
-                        <form onSubmit={handleSubmit} className='grid gap-4'>
+                        <form onSubmit={handleSubmit}>
                             {/* <Input name='first_name' onChange={onChange} value={value.first_name} required validation={{ required: true }} placeholder={cms.newsletter.form.first_name} /> */}
                             <Input type='email' name='email' onChange={onChange} value={value.email} required validation={{ required: true, isEmail: true }} placeholder={cms.newsletter.form.email} />
 

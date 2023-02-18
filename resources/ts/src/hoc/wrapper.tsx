@@ -1,4 +1,3 @@
-import axios from 'axios'
 import { ReactNode, useCallback, useEffect, useState } from 'react'
 import { HeadProvider } from 'react-head'
 
@@ -40,7 +39,7 @@ export default function Wrapper({ children }: WrapperProps) {
 
   const setLanguage = useCallback((language: LanguageType | null) => {
     setJustLanguage(language)
-    
+
     if (language) localStorage.setItem('frontend_lang', language.abbr)
     else localStorage.removeItem('frontend_lang')
   }, [])
@@ -70,14 +69,14 @@ export default function Wrapper({ children }: WrapperProps) {
     if (languages === null) getLanguages()
       .then(languages => {
         setLanguages(languages)
-        setLanguage(languages.find(language => language.abbr === 'fr')!)
+        setLanguage(languages.find(language => language.abbr === localStorage.getItem('frontend_lang'))!)
       })
   }, [languages, setLanguage])
 
   useEffect(() => {
-    if (content === null) getContent('fr')
+    getContent(language?.abbr!)
       .then(content => setContent(content))
-  }, [content])
+  }, [language])
 
   return loaded && languages && content ? (status === Status.LOADING ? <div className='fixed inset-0 flex items-center justify-center'>
     <img src="/images/bg-screen.svg" alt="BG Screen" className="absolute inset-0 image-cover -z-10" />
