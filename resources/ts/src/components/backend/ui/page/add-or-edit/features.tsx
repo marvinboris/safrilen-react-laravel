@@ -25,7 +25,7 @@ export default function ManageAddOrEditRoles({ edit }: Props) {
 
     const [state, setState] = useState<ManagerResourceManageStateType>({ ...initialState })
 
-    const inputChangeHandler = utility.add.component.inputChangeHandler(setState)
+    const inputChangeHandler = utility.add.component.inputChangeHandler(state, setState)
 
     return <ManagerAddOrEdit icon={CogIcon} edit={edit} resource='features' singular='feature' initialState={initialState} state={state} setState={setState}>
         <div className='grid md:grid-cols-3'>

@@ -44,7 +44,7 @@ class Product extends Model
 
     public function getStringifiedAttribute()
     {
-        return $this->name[env('MIX_DEFAULT_LANG', 'fr')];
+        return $this->name[env('VITE_DEFAULT_LANG', 'fr')];
     }
 
     public function getPhotoAttribute($value)

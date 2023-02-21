@@ -33,22 +33,12 @@ class PublicationController extends Controller
         $filteredData = Publication::orderBy('id');
 
         $filteredData = $filteredData
-            // ->join('users', function ($join) {
-            //     $join->on('users.id', 'publications.author_id');
-            //     $join->where('publications.author_type', '=', User::class);
-            // })
-            // ->join('admins', function ($join) {
-            //     $join->on('admins.id', 'publications.author_id');
-            //     $join->where('publications.author_type', '=', Admin::class);
-            // })
             ->select('publications.*')
             ->when($search, function ($query, $search) {
                 if ($search !== "")
                     $query
                         ->where('publications.title', 'LIKE', "%$search%")
                         ->orWhere('publications.body', 'LIKE', "%$search%")
-                        // ->orWhere('email', 'LIKE', "%$search%")
-                        // ->orWhere('name', 'LIKE', "%$search%")
                         ->orWhere('publications.photo', 'LIKE', "%$search%");
             });
 
@@ -104,7 +94,7 @@ class PublicationController extends Controller
 
         $publication = Publication::find($id);
         if (!$publication) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['publications']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['publications']['not_found'], 'danger'),
         ]);
 
         $information = $this->information();
@@ -134,12 +124,12 @@ class PublicationController extends Controller
         ]);
 
         if ($request->is_active == 1) Notification::send(Subscriber::whereIsActive(1)->get(), new Newsletter($input + [
-            'title' => $request->title[env('MIX_DEFAULT_LANG', 'fr')],
-            'body' => $request->body[env('MIX_DEFAULT_LANG', 'fr')],
+            'title' => $request->title[env('VITE_DEFAULT_LANG', 'fr')],
+            'body' => $request->body[env('VITE_DEFAULT_LANG', 'fr')],
         ]));
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['publications']['created'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['publications']['created'], 'success'),
         ]);
     }
 
@@ -150,7 +140,7 @@ class PublicationController extends Controller
 
         $publication = Publication::find($id);
         if (!$publication) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['publications']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['publications']['not_found'], 'danger'),
         ]);
 
         $rules = $this->rules;
@@ -170,12 +160,12 @@ class PublicationController extends Controller
         ]);
 
         if ($publication->is_active == 0 && $request->is_active == 1) Notification::send(Subscriber::whereIsActive(1)->get(), new Newsletter($input + [
-            'title' => $request->title[env('MIX_DEFAULT_LANG', 'fr')],
-            'body' => $request->body[env('MIX_DEFAULT_LANG', 'fr')],
+            'title' => $request->title[env('VITE_DEFAULT_LANG', 'fr')],
+            'body' => $request->body[env('VITE_DEFAULT_LANG', 'fr')],
         ]));
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['publications']['updated'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['publications']['updated'], 'success'),
             'publication' => $publication,
         ]);
     }
@@ -187,7 +177,7 @@ class PublicationController extends Controller
 
         $publication = Publication::find($id);
         if (!$publication) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['publications']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['publications']['not_found'], 'danger'),
         ]);
 
         if ($publication->photo && is_file(public_path($publication->photo))) unlink(public_path($publication->photo));
@@ -199,7 +189,7 @@ class PublicationController extends Controller
         $total = $data['total'];
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['publications']['deleted'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['publications']['deleted'], 'success'),
             'publications' => $publications,
             'total' => $total,
         ]);

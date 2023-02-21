@@ -1,9 +1,9 @@
 import React, { Fragment, ReactNode, useState } from "react";
 
-import { htmlEntities } from "../../../../../app/helpers/utils";
-import ContentType from "../../../../../app/types/content";
-import Select from "../../../../frontend/ui/form/select";
+import { useContentContext } from "../../../../../app/contexts/content";
+import { classNames, htmlEntities } from "../../../../../app/helpers/utils";
 
+import Select from "../../../../frontend/ui/form/select";
 import TextArea from "../../../../frontend/ui/form/text-area";
 
 type StringObject = { [key: string]: string | string[] | StringObject }
@@ -15,7 +15,6 @@ const recursiveDeepness = (paramItem: StringObject, paramName: string, paramId: 
     const mainId = `${paramId}-${item}`;
     const mainValue = (paramValue as StringObject)[item];
     const mainDeepness = paramDeepness.concat(item);
-console.log('mainValue', mainValue);
 
     let prepend;
     const findPrepend = paramPrepends.find(el => (new RegExp(el.regex.replace(/\[/g, '\\[').replace(/\]/g, '\\]'))).test(mainName));
@@ -37,11 +36,13 @@ interface WithPagesProps {
     cmsExample: CmsType
     cmsValue: CmsType
     part: 'auth' | 'backend' | 'frontend'
+    lang: string
+    active?: boolean
 }
 
 const capitalize = (string: string) => string.charAt(0).toUpperCase() + string.slice(1);
 
-export const WithPages = ({ cmsExample, cmsValue, part }: WithPagesProps) => {
+export const WithPages = ({ cmsExample, cmsValue, part, lang, active }: WithPagesProps) => {
     const [activeSection, setActiveSection] = useState(Object.keys(cmsExample).sort()[0]);
 
     const sectionsOptions = Object.keys(cmsValue).map(key => {
@@ -55,8 +56,7 @@ export const WithPages = ({ cmsExample, cmsValue, part }: WithPagesProps) => {
         return <option key={id} value={id}>{name}</option>;
     });
 
-    const prefix = part;
-    const prefixId = part;
+    const prefix = `${lang}[${part}]`, prefixId = `${lang}-${part}`;
 
     const resourceDeepness = (resource: string, paramPrepends: AddParams = [], paramAppends: AddParams = []) => {
         const resourceItem = cmsExample[resource];
@@ -68,7 +68,7 @@ export const WithPages = ({ cmsExample, cmsValue, part }: WithPagesProps) => {
     };
 
     const nonPagesKeys = Object.keys(cmsExample).filter(key => key !== 'pages');
-    const nonPagesContent = nonPagesKeys.map(item => <div key={`${Math.random()}${prefix}[${item}]`} className={`md:col-span-2 xl:col-span-3 gap-y-2 gap-x-4 grid md:grid-cols-2 xl:grid-cols-3 pt-4${item === activeSection ? "" : " hidden"}`}>
+    const nonPagesContent = nonPagesKeys.map(item => <div key={`${Math.random()}${prefix}[${lang}][${item}]`} className={`md:col-span-2 xl:col-span-3 gap-y-2 gap-x-4 grid md:grid-cols-2 xl:grid-cols-3 pt-4${active && item === activeSection ? "" : " hidden"}`}>
         {resourceDeepness(item)}
     </div>);
 
@@ -82,18 +82,18 @@ export const WithPages = ({ cmsExample, cmsValue, part }: WithPagesProps) => {
     };
 
     const pagesKeys = Object.keys(cmsExample.pages);
-    const pagesContent = pagesKeys.map(item => <div key={`${Math.random()}${prefix}[pages][${item}]`} className={`md:col-span-2 xl:col-span-3 gap-y-2 gap-x-4 grid md:grid-cols-2 xl:grid-cols-3 pt-4${item === activeSection ? "" : " hidden"}`}>
+    const pagesContent = pagesKeys.map(item => <div key={`${Math.random()}${prefix}[${lang}][pages][${item}]`} className={`md:col-span-2 xl:col-span-3 gap-y-2 gap-x-4 grid md:grid-cols-2 xl:grid-cols-3 pt-4${active && item === activeSection ? "" : " hidden"}`}>
         {pagesResourceDeepness(item)}
     </div>);
 
     return <>
-        <div>
+        <div className={active ? "" : "hidden"}>
             <Select inputSize="sm" name="section" label={'Section'} onChange={e => setActiveSection(e.target.value)} value={activeSection}>
                 {sectionsOptions}
             </Select>
         </div>
 
-        <div className='md:col-span-2 xl:col-span-3 py-4'>
+        <div className={classNames('md:col-span-2 xl:col-span-3 py-4', active ? "" : "hidden")}>
             <hr />
         </div>
 

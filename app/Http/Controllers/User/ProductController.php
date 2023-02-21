@@ -96,7 +96,7 @@ class ProductController extends Controller
 
         $product = Product::find($id);
         if (!$product) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['products']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['products']['not_found'], 'danger'),
         ]);
 
         $information = $this->information();
@@ -126,12 +126,12 @@ class ProductController extends Controller
         ]);
 
         if ($request->is_active == 1) Notification::send(Subscriber::whereIsActive(1)->get(), new Newsletter($input + [
-            'name' => $request->name[env('MIX_DEFAULT_LANG', 'fr')],
-            'description' => $request->description[env('MIX_DEFAULT_LANG', 'fr')],
+            'name' => $request->name[env('VITE_DEFAULT_LANG', 'fr')],
+            'description' => $request->description[env('VITE_DEFAULT_LANG', 'fr')],
         ]));
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['products']['created'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['products']['created'], 'success'),
         ]);
     }
 
@@ -142,7 +142,7 @@ class ProductController extends Controller
 
         $product = Product::find($id);
         if (!$product) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['products']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['products']['not_found'], 'danger'),
         ]);
 
         $rules = $this->rules;
@@ -162,12 +162,12 @@ class ProductController extends Controller
         ]);
 
         if ($product->is_active == 0 && $request->is_active == 1) Notification::send(Subscriber::whereIsActive(1)->get(), new Newsletter($input + [
-            'name' => $request->name[env('MIX_DEFAULT_LANG', 'fr')],
-            'description' => $request->description[env('MIX_DEFAULT_LANG', 'fr')],
+            'name' => $request->name[env('VITE_DEFAULT_LANG', 'fr')],
+            'description' => $request->description[env('VITE_DEFAULT_LANG', 'fr')],
         ]));
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['products']['updated'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['products']['updated'], 'success'),
             'product' => $product,
         ]);
     }
@@ -179,7 +179,7 @@ class ProductController extends Controller
 
         $product = Product::find($id);
         if (!$product) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['products']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['products']['not_found'], 'danger'),
         ]);
 
         if ($product->photo && is_file(public_path($product->photo))) unlink(public_path($product->photo));
@@ -191,7 +191,7 @@ class ProductController extends Controller
         $total = $data['total'];
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['products']['deleted'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['products']['deleted'], 'success'),
             'products' => $products,
             'total' => $total,
         ]);

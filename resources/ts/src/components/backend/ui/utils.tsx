@@ -98,10 +98,17 @@ export const add = {
             setState((state) => ({ ...state, add: true }))
             props.post!(document.querySelector('form')!)
         },
-        inputChangeHandler: (setState: SetStateType) => (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+        inputChangeHandler: (state: ManagerResourceManageStateType, setState: SetStateType) => (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
             e.persist()
             const { type, name, value } = e.target;
             if (type === 'file') readURL(e.target as HTMLInputElement, setState);
+            if (name.includes('[')) {
+                const { translate } = state as ManagerResourceManageStateType & { translate: string };
+                const fieldName = name.split('[')[0];
+                const element = { ...(state[fieldName] as { [key: string]: string }) };
+                element[translate] = value;
+                return setState(state => ({ ...state, [fieldName]: element }));
+            }
             else setState(state => ({ ...state, [name]: value }));
         },
         fileUpload: (id: string) => document.getElementById(id)!.click(),
@@ -147,6 +154,7 @@ export const add = {
                     <Redirection props={props} resource={resource} />
                     {message && <Alert className="mb-4" color={message.type}>{message.content}</Alert>}
                     <Form onSubmit={saveHandler(props)} icon={icon} title={props.edit ? cms.edit : cms.add} list={cms.index} link={`/${role}/${resource.split('_').join('-')}`}>
+                        {props.edit && <input type="hidden" name="_method" defaultValue="PATCH" />}
                         {children}
                     </Form>
                 </div>

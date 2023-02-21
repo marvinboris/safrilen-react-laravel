@@ -85,7 +85,7 @@ class SubscriberController extends Controller
 
         $subscriber = Subscriber::find($id);
         if (!$subscriber) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['subscribers']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['subscribers']['not_found'], 'danger'),
         ]);
 
         $information = $this->information();
@@ -107,7 +107,7 @@ class SubscriberController extends Controller
         Subscriber::create($input);
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['subscribers']['created'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['subscribers']['created'], 'success'),
         ]);
     }
 
@@ -118,7 +118,7 @@ class SubscriberController extends Controller
 
         $subscriber = Subscriber::find($id);
         if (!$subscriber) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['subscribers']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['subscribers']['not_found'], 'danger'),
         ]);
 
         $rules = $this->rules;
@@ -129,7 +129,7 @@ class SubscriberController extends Controller
         $subscriber->update($input);
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['subscribers']['updated'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['subscribers']['updated'], 'success'),
             'subscriber' => $subscriber,
         ]);
     }
@@ -141,7 +141,7 @@ class SubscriberController extends Controller
 
         $subscriber = Subscriber::find($id);
         if (!$subscriber) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['subscribers']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['subscribers']['not_found'], 'danger'),
         ]);
 
         $subscriber->delete();
@@ -152,7 +152,7 @@ class SubscriberController extends Controller
         $total = $data['total'];
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['subscribers']['deleted'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['subscribers']['deleted'], 'success'),
             'subscribers' => $subscribers,
             'total' => $total,
         ]);

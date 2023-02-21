@@ -1,3 +1,4 @@
+import LanguageType from "./language"
 import ServiceType from "./models/service"
 
 export default interface ContentType {
@@ -86,7 +87,7 @@ export default interface ContentType {
                 },
                 cms: {
                     title: string, global: string, general: string, messages: string, frontend: string, components: string, backend: string, auth: string
-                    form: { logo: string, app_name: string, company_name: string, company_logo: string }
+                    form: { logo: string, app_name: string, company_name: string, company_logo: string, language: string, section: string }
                 },
                 admins: {
                     title: string, add: string, edit: string, index: string
@@ -110,15 +111,15 @@ export default interface ContentType {
                 },
                 services: {
                     title: string, add: string, edit: string, index: string
-                    form: { title: string, body: string, photo: string, service_photo: string, is_active: string, select_status: string, created_at: string }
+                    form: { title: string, body: string, language: string, photo: string, service_photo: string, is_active: string, select_status: string, created_at: string }
                 },
                 products: {
                     title: string, add: string, edit: string, index: string
-                    form: { name: string, description: string, price: string, photo: string, product_photo: string, is_active: string, select_status: string, created_at: string }
+                    form: { name: string, description: string, price: string, language: string, photo: string, product_photo: string, is_active: string, select_status: string, created_at: string }
                 },
                 publications: {
                     title: string, add: string, edit: string, index: string
-                    form: { title: string, description: string, body: string, photo: string, publication_photo: string, is_active: string, select_status: string, created_at: string }
+                    form: { title: string, description: string, body: string, language: string, photo: string, publication_photo: string, is_active: string, select_status: string, created_at: string }
                 },
                 notifications: {
                     title: string, show: string, index: string
@@ -133,7 +134,7 @@ export default interface ContentType {
                 },
                 testimonials: {
                     title: string, add: string, edit: string, index: string
-                    form: { name: string, title: string, body: string, photo: string, testimonial_photo: string, is_active: string, select_status: string, created_at: string }
+                    form: { name: string, title: string, link: string, language: string, photo: string, testimonial_photo: string, is_active: string, select_status: string, created_at: string }
                 },
                 images: {
                     title: string, add: string, edit: string, index: string
@@ -222,4 +223,5 @@ export default interface ContentType {
         }
     }
     services: ServiceType[]
+    languages: LanguageType[]
 }

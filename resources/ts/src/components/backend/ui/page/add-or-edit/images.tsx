@@ -24,7 +24,7 @@ export default function ManageAddOrEditImages({ edit }: Props) {
 
     const [state, setState] = useState<ManagerResourceManageStateType>({ ...initialState })
 
-    const inputChangeHandler = utility.add.component.inputChangeHandler(setState)
+    const inputChangeHandler = utility.add.component.inputChangeHandler(state, setState)
     const fileUpload = utility.add.component.fileUpload
 
     return <ManagerAddOrEdit icon={WrenchIcon} edit={edit} resource='images' singular='image' initialState={initialState} state={state} setState={setState} staticChild={<>

@@ -62,7 +62,7 @@ class FrontendController extends Controller
         ]);
 
         Notification::send(User::whereEmail(env('COMPANY_EMAIL'))->first(), new QuoteNotification($request->except('service') + [
-            'service' => Service::find($request->service)->title[env('MIX_DEFAULT_LANG', 'fr')],
+            'service' => Service::find($request->service)->title[env('VITE_DEFAULT_LANG', 'fr')],
         ]));
 
         return response()->json([

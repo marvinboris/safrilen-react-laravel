@@ -5,19 +5,15 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\UtilController;
 use App\Models\Service;
-use App\Models\Subscriber;
-use App\Notifications\Newsletter;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Notification;
 
 class ServiceController extends Controller
 {
     private $rules = [
         'title' => 'array|required',
         'body' => 'array|required',
-        'icon' => 'required|string',
         'is_active' => 'required|integer',
-        'photos.*' => 'required|image',
+        'photo' => 'nullable|image',
     ];
 
 
@@ -39,8 +35,7 @@ class ServiceController extends Controller
                 if ($search !== "")
                     $query
                         ->where('services.title', 'LIKE', "%$search%")
-                        ->orWhere('services.body', 'LIKE', "%$search%")
-                        ->orWhere('services.icon', 'LIKE', "%$search%");
+                        ->orWhere('services.body', 'LIKE', "%$search%");
             });
 
         $total = $filteredData->count();
@@ -93,7 +88,7 @@ class ServiceController extends Controller
 
         $service = Service::find($id);
         if (!$service) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['services']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['services']['not_found'], 'danger'),
         ]);
 
         $information = $this->information();
@@ -110,22 +105,20 @@ class ServiceController extends Controller
 
         $request->validate($this->rules);
 
-        $input = $request->except(['title', 'body', 'photos']);
+        $input = $request->except(['title', 'body', 'photo']);
 
-        $photos = [];
-        foreach ($request->photos as $photo) {
-            $fileName = UtilController::resize($photo, 'services');
-            $photos[] = htmlspecialchars($fileName);
+        if ($file = $request->file('photo')) {
+            $fileName = UtilController::resize($file, 'services');
+            $input['photo'] = htmlspecialchars($fileName);
         }
 
         Service::create($input + [
             'title' => json_encode($request->title),
             'body' => json_encode($request->body),
-            'photos' => json_encode($photos),
         ]);
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['services']['created'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['services']['created'], 'success'),
         ]);
     }
 
@@ -136,25 +129,18 @@ class ServiceController extends Controller
 
         $service = Service::find($id);
         if (!$service) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['services']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['services']['not_found'], 'danger'),
         ]);
 
         $rules = $this->rules;
         $request->validate($rules);
 
-        $input = $request->except(['title', 'body', 'photos']);
+        $input = $request->except(['title', 'body', 'photo']);
 
-        if (count($request->photos) > 0) {
-            $photos = [];
-            foreach ($request->photos as $photo) {
-                $fileName = UtilController::resize($photo, 'services');
-                $photos[] = htmlspecialchars($fileName);
-            }
-
-            foreach ($service->photos as $service_photo) {
-                if ($service_photo && is_file(public_path($service_photo))) unlink(public_path($service_photo));
-            }
-            $input['photos'] = json_encode($photos);
+        if ($file = $request->file('photo')) {
+            if ($service->photo && is_file(public_path($service->photo))) unlink(public_path($service->photo));
+            $fileName = UtilController::resize($file, 'services');
+            $input['photo'] = htmlspecialchars($fileName);
         }
 
         $service->update($input + [
@@ -163,7 +149,7 @@ class ServiceController extends Controller
         ]);
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['services']['updated'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['services']['updated'], 'success'),
             'service' => $service,
         ]);
     }
@@ -175,9 +161,10 @@ class ServiceController extends Controller
 
         $service = Service::find($id);
         if (!$service) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['services']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['services']['not_found'], 'danger'),
         ]);
 
+        if ($service->photo && is_file(public_path($service->photo))) unlink(public_path($service->photo));
         $service->delete();
 
         $data = $this->data();
@@ -186,7 +173,7 @@ class ServiceController extends Controller
         $total = $data['total'];
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['services']['deleted'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['services']['deleted'], 'success'),
             'services' => $services,
             'total' => $total,
         ]);

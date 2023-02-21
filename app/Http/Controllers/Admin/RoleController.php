@@ -84,7 +84,7 @@ class RoleController extends Controller
 
         $role = Role::find($id);
         if (!$role) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['roles']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['roles']['not_found'], 'danger'),
         ]);
 
         $role_features = [];
@@ -134,7 +134,7 @@ class RoleController extends Controller
         $role->features()->sync($features);
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['roles']['created'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['roles']['created'], 'success'),
         ]);
     }
 
@@ -145,7 +145,7 @@ class RoleController extends Controller
 
         $role = Role::find($id);
         if (!$role) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['roles']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['roles']['not_found'], 'danger'),
         ]);
 
         $rules = UtilController::rules($this->rules, $role);
@@ -169,7 +169,7 @@ class RoleController extends Controller
         $role->features()->sync($features);
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['roles']['created'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['roles']['created'], 'success'),
             'role' => $role,
         ]);
     }
@@ -181,7 +181,7 @@ class RoleController extends Controller
 
         $role = Role::find($id);
         if (!$role) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['roles']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['roles']['not_found'], 'danger'),
         ]);
 
         $role->delete();
@@ -192,7 +192,7 @@ class RoleController extends Controller
         $total = $data['total'];
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['roles']['deleted'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['roles']['deleted'], 'success'),
             'roles' => $roles,
             'total' => $total,
         ]);

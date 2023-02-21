@@ -97,7 +97,7 @@ class UserController extends Controller
 
         $user = User::find($id);
         if (!$user) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['users']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['users']['not_found'], 'danger'),
         ]);
 
         $roles = [];

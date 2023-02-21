@@ -42,8 +42,12 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
                     $jsonString = file_get_contents(base_path('cms.json'));
                     $cms = json_decode($jsonString, true);
 
+                    $jsonString = file_get_contents(base_path('cms.example.json'));
+                    $cmsExample = json_decode($jsonString, true);
+
                     return response()->json([
                         'cms' => $cms,
+                        'cmsExample' => $cmsExample,
                         'languages' => Language::all(),
                     ]);
                 });
@@ -156,7 +160,7 @@ Route::prefix('content')->name('content.')->group(function () {
         $cmsFile = json_decode($jsonString, true);
 
         $abbr = $lang;
-        if (Language::whereAbbr($lang)->count() === 0) $abbr = env('MIX_DEFAULT_LANG', 'fr');
+        if (Language::whereAbbr($lang)->count() === 0) $abbr = env('VITE_DEFAULT_LANG', 'fr');
 
         $cms = [
             'global' => $cmsFile['global'],

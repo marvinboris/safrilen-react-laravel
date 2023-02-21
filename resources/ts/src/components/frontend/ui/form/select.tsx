@@ -35,8 +35,8 @@ export default function Select({ icon: Icon, label, addon, append, inputSize = '
                 {addon && <div className={classNames(inputSize === 'sm' ? "w-12" : "w-12 md:w-16", 'relative z-20 text-center flex items-center justify-center')}>{addon}</div>}
             </div>
 
-            <div className={classNames(inputSize === 'sm' ? Icon || addon ? validation ? 'pr-5' : 'pr-0' : 'px-5' : Icon || addon ? 'pr-8' : 'px-8', 'flex-1 relative z-0')}>
-                <select {...props} onChange={onChange} className={classNames(inputSize === 'sm' ? 'text-sm' : 'text-lg', 'min-h-[48px] border-none bg-transparent outline-none focus:ring-0 text-inherit w-full placeholder:opacity-30 -mx-3')} />
+            <div className={classNames(inputSize === 'sm' ? Icon || addon ? validation ? 'pr-5' : 'pr-0' : 'px-2' : Icon || addon ? 'pr-8' : 'px-8', 'flex-1 relative z-0')}>
+                <select {...props} onChange={onChange} className={classNames(inputSize === 'sm' ? 'text-sm' : 'text-lg', 'min-h-[48px] border-none bg-transparent outline-none focus:ring-0 text-inherit w-full placeholder:opacity-30')} />
 
                 {touched && validation ? <div className="absolute w-12 right-0 inset-y-0 flex items-center justify-center">
                     {valid ? <CheckIcon className='w-4 text-green' /> : <ExclamationCircleIcon className='w-4 text-red' />}

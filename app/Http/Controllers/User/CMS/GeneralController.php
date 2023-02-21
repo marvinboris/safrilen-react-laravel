@@ -15,10 +15,12 @@ class GeneralController extends Controller
     {
         $jsonString = file_get_contents(base_path('cms.json'));
         $cms = json_decode($jsonString, true);
+        $jsonString = file_get_contents(base_path('cms.example.json'));
+        $cmsExample = json_decode($jsonString, true);
 
         $request->validate($this->rules);
 
-        $input = $request->except('_method');
+        $input = $request->except(['_method', 'page', 'show', 'search']);
 
         foreach (Language::get() as $language) {
             $cms['pages'][$language->abbr]['general'] = $input[$language->abbr]['general'];
@@ -30,6 +32,7 @@ class GeneralController extends Controller
         return response()->json([
             'message' => UtilController::message('Contenu modifié avec succès.', 'success'),
             'cms' => $cms,
+            'cmsExample' => $cmsExample,
         ]);
     }
 }

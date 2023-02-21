@@ -25,12 +25,12 @@ export default function Input({ icon: Icon, label, addon, className, validation,
         {label && <label htmlFor={props.id ? props.id : props.name}>{label}</label>}
 
         <div className="h-12 rounded-[8px] bg-secondary-700/10 md:bg-secondary-100 flex items-center">
-            <div>
+            {(Icon || addon) ? <div>
                 <div className="w-[47px] flex justify-center">
                     {Icon && <Icon className='w-[18px]' />}
                 </div>
                 {addon}
-            </div>
+            </div> : null}
 
             <div className='h-full flex-1 flex items-center relative'>
                 <input {...props} onChange={onChange} className='h-full flex-1 border-none text-sm bg-transparent text-inherit w-full outline-none focus:ring-0' />

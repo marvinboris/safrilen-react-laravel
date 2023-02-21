@@ -97,7 +97,7 @@ class UserController extends Controller
 
         $user_ = User::find($id);
         if (!$user) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['users']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['users']['not_found'], 'danger'),
         ]);
 
         $roles = [];
@@ -134,7 +134,7 @@ class UserController extends Controller
         User::create($input);
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['users']['created'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['users']['created'], 'success'),
         ]);
     }
 
@@ -145,7 +145,7 @@ class UserController extends Controller
 
         $user_ = User::find($id);
         if (!$user) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['users']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['users']['not_found'], 'danger'),
         ]);
 
         $rules = $this->rules;
@@ -166,7 +166,7 @@ class UserController extends Controller
         $user_->update($input);
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['users']['updated'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['users']['updated'], 'success'),
             'user' => $user_,
         ]);
     }
@@ -178,7 +178,7 @@ class UserController extends Controller
 
         $user_ = User::find($id);
         if (!$user) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['users']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['users']['not_found'], 'danger'),
         ]);
 
         if ($user_->photo) unlink($user_->photo);
@@ -190,7 +190,7 @@ class UserController extends Controller
         $total = $data['total'];
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['users']['deleted'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['users']['deleted'], 'success'),
             'users' => $users,
             'total' => $total,
         ]);

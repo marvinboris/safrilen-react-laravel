@@ -54,7 +54,7 @@ class Publication extends Model
 
     public function getStringifiedAttribute()
     {
-        return $this->title[env('MIX_DEFAULT_LANG', 'fr')];
+        return $this->title[env('VITE_DEFAULT_LANG', 'fr')];
     }
 
     public function author()

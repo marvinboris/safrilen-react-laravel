@@ -71,7 +71,7 @@ class FeatureController extends Controller
 
         $feature = Feature::find($id);
         if (!$feature) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['features']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['features']['not_found'], 'danger'),
         ]);
 
         return response()->json([
@@ -93,7 +93,7 @@ class FeatureController extends Controller
         Feature::create($input);
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['features']['created'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['features']['created'], 'success'),
         ]);
     }
 
@@ -104,7 +104,7 @@ class FeatureController extends Controller
 
         $feature = Feature::find($id);
         if (!$feature) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['features']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['features']['not_found'], 'danger'),
         ]);
 
         $rules = UtilController::rules($this->rules, $feature);
@@ -115,7 +115,7 @@ class FeatureController extends Controller
         $feature->update($input);
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['features']['updated'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['features']['updated'], 'success'),
             'feature' => $feature,
         ]);
     }
@@ -127,7 +127,7 @@ class FeatureController extends Controller
 
         $feature = Feature::find($id);
         if (!$feature) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['features']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['features']['not_found'], 'danger'),
         ]);
 
         $feature->delete();
@@ -138,7 +138,7 @@ class FeatureController extends Controller
         $total = $data['total'];
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['features']['deleted'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['features']['deleted'], 'success'),
             'features' => $features,
             'total' => $total,
         ]);

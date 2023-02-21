@@ -346,7 +346,9 @@
                             "logo": "Logo",
                             "app_name": "Nom de l'application",
                             "company_name": "Nom de l'entreprise",
-                            "company_logo": "Logo de l'entreprise"
+                            "company_logo": "Logo de l'entreprise",
+                            "language": "Language",
+                            "section": "Section"
                         }
                     },
                     "admins": {
@@ -492,11 +494,12 @@
                         "form": {
                             "name": "Nom",
                             "title": "Titre",
-                            "body": "Contenu",
+                            "link": "Lien",
                             "photo": "Photo",
                             "testimony_photo": "Photo du témoignage",
                             "is_active": "Statut",
                             "select_status": "S\u00e9lectionner le statut",
+                            "language": "Langue",
                             "created_at": "Cr\u00e9\u00e9 le"
                         }
                     },
@@ -940,7 +943,7 @@
                         "showing": "Showing",
                         "from": "on",
                         "entries": {
-                            "singular": "entrance",
+                            "singular": "entry",
                             "plural": "entries"
                         }
                     }
@@ -1062,7 +1065,9 @@
                             "logo": "Logo",
                             "app_name": "App Name",
                             "company_name": "Company name",
-                            "company_logo": "Company Logo"
+                            "company_logo": "Company Logo",
+                            "language": "Langue",
+                            "section": "Section"
                         }
                     },
                     "admins": {
@@ -1078,7 +1083,7 @@
                             "password_confirmation": "Password confirmation",
                             "email": "Email address",
                             "admin_photo": "Admin Photo",
-                            "picture": "Picture"
+                            "photo": "Photo"
                         }
                     },
                     "users": {
@@ -1096,7 +1101,7 @@
                             "role": "Role",
                             "select_role": "Select Role",
                             "user_photo": "User photo",
-                            "picture": "Picture"
+                            "photo": "Photo"
                         }
                     },
                     "roles": {
@@ -1151,10 +1156,11 @@
                         "form": {
                             "title": "Title",
                             "body": "Content",
-                            "picture": "Picture",
+                            "photo": "Photo",
                             "service_photo": "Service photo",
                             "is_active": "Status",
                             "select_status": "Select status",
+                            "language": "Language",
                             "created_at": "Created at"
                         }
                     },
@@ -1177,10 +1183,11 @@
                             "name": "Name",
                             "description": "Description",
                             "price": "Price",
-                            "picture": "Picture",
+                            "photo": "Photo",
                             "product_photo": "Product photo",
                             "is_active": "Status",
                             "select_status": "Select status",
+                            "language": "Language",
                             "created_at": "Created at"
                         }
                     },
@@ -1193,10 +1200,11 @@
                             "title": "Title",
                             "description": "Description",
                             "body": "Content",
-                            "picture": "Picture",
+                            "photo": "Photo",
                             "post_photo": "Post photo",
                             "is_active": "Status",
                             "select_status": "Select status",
+                            "language": "Language",
                             "created_at": "Created at"
                         }
                     },
@@ -1208,11 +1216,12 @@
                         "form": {
                             "name": "Name",
                             "title": "Title",
-                            "body": "Content",
-                            "picture": "Picture",
+                            "link": "Link",
+                            "photo": "Photo",
                             "testimony_photo": "Testimony Photo",
                             "is_active": "Status",
                             "select_status": "Select status",
+                            "language": "Language",
                             "created_at": "Created at"
                         }
                     },
@@ -1223,7 +1232,7 @@
                         "index": "List of images",
                         "form": {
                             "src": "Link",
-                            "picture": "Picture",
+                            "photo": "Photo",
                             "created_at": "Created at"
                         }
                     }

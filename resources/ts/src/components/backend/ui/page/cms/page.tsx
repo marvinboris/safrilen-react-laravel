@@ -9,6 +9,9 @@ import Status from "../../../../../app/types/enums/status"
 
 import { selectAuth } from "../../../../../features/auth/authSlice"
 import { get, patch, selectBackend } from "../../../../../features/backend/backendSlice"
+import Alert from "../../../../frontend/ui/alert"
+
+import Select from "../../../../frontend/ui/form/select"
 
 import { Head } from "../../../navigation/layout"
 
@@ -21,7 +24,9 @@ interface CmsPageProps {
 
 export default function CmsPage({ name }: CmsPageProps) {
     const { content } = useContentContext()
-    const { cms: { global: { app_name, logo }, backend: { components: { form: { save } }, pages: { cms: { title, [name]: pageTitle, form } } } } } = content!
+    const { cms: { global: { app_name, logo }, backend: { components: { form: { save } }, pages: { cms: { title, [name]: pageTitle, form } } } }, languages } = content!
+
+    const [activeLanguage, setActiveLanguage] = useState((import.meta as ImportMeta & { env: { [key: string]: string } }).env.VITE_DEFAULT_LANG)
 
     const dispatch = useAppDispatch()
     const { role } = useAppSelector(selectAuth)
@@ -44,13 +49,15 @@ export default function CmsPage({ name }: CmsPageProps) {
     }
 
     let mainContent
-    if (data && data.cms && data.cms[name]) {
-        const _data = data.cms[name]
+    if (data && data.cms) mainContent = languages.map(language => {
+        const _data = data.cms.pages[language.abbr][name]
         const cmsValue = { ..._data.pages };
         Object.keys(_data).filter(key => key !== 'pages').forEach(key => cmsValue[key] = _data[key]);
 
-        mainContent = <WithPages cmsExample={data.cmsExample[name]} cmsValue={cmsValue} part={name} />
-    }
+        return <WithPages key={`with-pages-${language.abbr}-${name}`} lang={language.abbr} active={language.abbr === activeLanguage} cmsExample={data.cmsExample.pages[language.abbr][name]} cmsValue={cmsValue} part={name} />
+    })
+
+    const languagesOptions = languages.map(language => <option key={JSON.stringify(language)} value={language.abbr}>{language.name}</option>);
 
     return <>
         <Head link={`/${role}/cms/${name}`} title={`${title} | ${app_name}`} description='' />
@@ -58,6 +65,8 @@ export default function CmsPage({ name }: CmsPageProps) {
             <PageTitle icon={Cog8ToothIcon} title={title} subtitle={pageTitle} />
 
             <div className="px-[33px] md:px-[42px] pt-[29px] md:pt-[47px] pb-[54px]">
+                {data.message && <Alert color={data.message.type} className="mb-4">{data.message.content}</Alert>}
+
                 <div className="bg-white rounded-[30px] py-8 px-[38.36px] shadow-2xl mb-[25px]">
                     <div className="mb-[46.94px] flex flex-wrap md:flex-nowrap items-center justify-between">
                         <div className='order-2 md:order-1'>
@@ -71,7 +80,15 @@ export default function CmsPage({ name }: CmsPageProps) {
                     </div>
 
                     <form onSubmit={submitHandler}>
+
+                        <input type="hidden" name="_method" value="PATCH" />
                         <div className="grid gap-y-2 gap-x-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 overflow-auto">
+                            <div>
+                                <Select inputSize="sm" name="translate" label={form.language} onChange={e => setActiveLanguage(e.target.value)} value={activeLanguage}>
+                                    {languagesOptions}
+                                </Select>
+                            </div>
+
                             {mainContent}
                         </div>
 

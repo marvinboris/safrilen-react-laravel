@@ -132,7 +132,7 @@ class UtilController extends Controller
         foreach (Language::all() as $language) {
             if (!array_key_exists($language->abbr, $value)) 
             $value[$language->abbr] = 
-            $value[env('MIX_DEFAULT_LANG', 'fr')];
+            $value[env('VITE_DEFAULT_LANG', 'fr')];
         }
 
         return $value;

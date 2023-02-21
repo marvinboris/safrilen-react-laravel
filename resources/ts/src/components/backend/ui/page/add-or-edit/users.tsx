@@ -38,7 +38,7 @@ export default function ManageAddOrEditUsers({ edit }: Props) {
 
     const [state, setState] = useState<ManagerResourceManageStateType>({ ...initialState })
 
-    const inputChangeHandler = utility.add.component.inputChangeHandler(setState)
+    const inputChangeHandler = utility.add.component.inputChangeHandler(state, setState)
     const fileUpload = utility.add.component.fileUpload
 
     const roles = backend && backend.roles ? (backend.roles as RoleType[]) : []

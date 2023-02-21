@@ -66,11 +66,7 @@ const ManagerAddOrEdit = ({ initialState, resource, singular, edit, icon, childr
     }), [backend, content, dispatch, edit, location.state, message, navigate, params, query.id, role, status])
 
     useEffect(() => {
-        if (status === Status.IDLE && !backend) utility.add.lifecycle.componentDidMount(props, setIsMounted)
-
-        return () => {
-            if (backend && !backend.message) dispatch(reset())
-        }
+        if (status === Status.IDLE && (!backend || (backend && 'total' in backend))) utility.add.lifecycle.componentDidMount(props, setIsMounted)
     }, [backend, dispatch, props, status])
 
     useEffect(() => {

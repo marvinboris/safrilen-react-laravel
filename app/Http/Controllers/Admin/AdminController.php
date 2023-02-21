@@ -76,7 +76,7 @@ class AdminController extends Controller
 
         $admin = Admin::find($id);
         if (!$admin) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['admins']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['admins']['not_found'], 'danger'),
         ]);
 
         return response()->json([
@@ -104,7 +104,7 @@ class AdminController extends Controller
         Admin::create($input);
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['admins']['created'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['admins']['created'], 'success'),
         ]);
     }
 
@@ -115,7 +115,7 @@ class AdminController extends Controller
 
         $admin = Admin::find($id);
         if (!$admin) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['admins']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['admins']['not_found'], 'danger'),
         ]);
 
         $rules = $this->rules;
@@ -136,7 +136,7 @@ class AdminController extends Controller
         $admin->update($input);
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['admins']['updated'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['admins']['updated'], 'success'),
             'admin' => $admin,
         ]);
     }
@@ -148,7 +148,7 @@ class AdminController extends Controller
 
         $admin = Admin::find($id);
         if (!$admin) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['admins']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['admins']['not_found'], 'danger'),
         ]);
 
         if ($admin->photo) unlink($admin->photo);
@@ -160,7 +160,7 @@ class AdminController extends Controller
         $total = $data['total'];
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['admins']['deleted'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['admins']['deleted'], 'success'),
             'admins' => $admins,
             'total' => $total,
         ]);

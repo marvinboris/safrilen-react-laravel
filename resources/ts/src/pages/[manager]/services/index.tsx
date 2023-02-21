@@ -33,7 +33,7 @@ const ManageServicesPage = () => {
             created_at: convertDate(service.created_at),
             title: service.title[abbr],
             body: htmlEntities(service.body[abbr]),
-            photo: <Photo photo={service.photo} see={see} title={`${form.service_photo}: ${service.title}`} />,
+            photo: <Photo photo={service.photo} see={see} title={`${form.service_photo}: ${service.title[abbr]}`} />,
             action: <Action props={props} resource='services' item={service} />,
         });
     });

@@ -13,7 +13,7 @@ class TestimonialController extends Controller
     private $rules = [
         'name' => 'string|required',
         'title' => 'array|required',
-        'body' => 'array|required',
+        'link' => 'string|required',
         'photo' => 'nullable|image',
         'is_active' => 'required|integer',
     ];
@@ -38,8 +38,7 @@ class TestimonialController extends Controller
                     $query
                         ->where('testimonials.title', 'LIKE', "%$search%")
                         ->orWhere('testimonials.name', 'LIKE', "%$search%")
-                        ->orWhere('testimonials.body', 'LIKE', "%$search%")
-                        ->orWhere('testimonials.photo', 'LIKE', "%$search%");
+                        ->orWhere('testimonials.link', 'LIKE', "%$search%");
             });
 
         $total = $filteredData->count();
@@ -92,7 +91,7 @@ class TestimonialController extends Controller
 
         $testimonial = Testimonial::find($id);
         if (!$testimonial) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['testimonials']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['testimonials']['not_found'], 'danger'),
         ]);
 
         $information = $this->information();
@@ -109,7 +108,7 @@ class TestimonialController extends Controller
 
         $request->validate($this->rules);
 
-        $input = $request->except(['photo', 'title', 'body']);
+        $input = $request->except(['photo', 'title']);
 
         if ($file = $request->file('photo')) {
             $fileName = UtilController::resize($file, 'testimonials');
@@ -118,11 +117,10 @@ class TestimonialController extends Controller
 
         Testimonial::create($input + [
             'title' => json_encode($request->title),
-            'body' => json_encode($request->body),
         ]);
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['testimonials']['created'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['testimonials']['created'], 'success'),
         ]);
     }
 
@@ -133,13 +131,13 @@ class TestimonialController extends Controller
 
         $testimonial = Testimonial::find($id);
         if (!$testimonial) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['testimonials']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['testimonials']['not_found'], 'danger'),
         ]);
 
         $rules = $this->rules;
         $request->validate($rules);
 
-        $input = $request->except(['photo', 'title', 'body']);
+        $input = $request->except(['photo', 'title']);
 
         if ($file = $request->file('photo')) {
             if ($testimonial->photo && is_file(public_path($testimonial->photo))) unlink(public_path($testimonial->photo));
@@ -149,11 +147,10 @@ class TestimonialController extends Controller
 
         $testimonial->update($input + [
             'title' => json_encode($request->title),
-            'body' => json_encode($request->body),
         ]);
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['testimonials']['updated'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['testimonials']['updated'], 'success'),
             'testimonial' => $testimonial,
         ]);
     }
@@ -165,7 +162,7 @@ class TestimonialController extends Controller
 
         $testimonial = Testimonial::find($id);
         if (!$testimonial) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['testimonials']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['testimonials']['not_found'], 'danger'),
         ]);
 
         if ($testimonial->photo && is_file(public_path($testimonial->photo))) unlink(public_path($testimonial->photo));
@@ -177,7 +174,7 @@ class TestimonialController extends Controller
         $total = $data['total'];
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['testimonials']['deleted'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['testimonials']['deleted'], 'success'),
             'testimonials' => $testimonials,
             'total' => $total,
         ]);

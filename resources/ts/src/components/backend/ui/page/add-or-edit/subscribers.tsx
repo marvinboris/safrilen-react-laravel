@@ -24,7 +24,7 @@ export default function ManageAddOrEditSubscribers({ edit }: Props) {
 
     const [state, setState] = useState<ManagerResourceManageStateType>({ ...initialState })
 
-    const inputChangeHandler = utility.add.component.inputChangeHandler(setState)
+    const inputChangeHandler = utility.add.component.inputChangeHandler(state, setState)
 
     return <ManagerAddOrEdit icon={UserIcon} edit={edit} resource='subscribers' singular='subscriber' initialState={initialState} state={state} setState={setState}>
         <div className='grid md:grid-cols-3'>

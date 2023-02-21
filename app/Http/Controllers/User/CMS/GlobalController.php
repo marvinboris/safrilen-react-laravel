@@ -18,6 +18,8 @@ class GlobalController extends Controller
     {
         $jsonString = file_get_contents(base_path('cms.json'));
         $cms = json_decode($jsonString, true);
+        $jsonString = file_get_contents(base_path('cms.example.json'));
+        $cmsExample = json_decode($jsonString, true);
 
         $request->validate($this->rules);
 
@@ -39,6 +41,7 @@ class GlobalController extends Controller
         return response()->json([
             'message' => UtilController::message('Contenu modifié avec succès.', 'success'),
             'cms' => $cms,
+            'cmsExample' => $cmsExample,
         ]);
     }
 }

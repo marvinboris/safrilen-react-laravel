@@ -73,7 +73,7 @@ class LanguageController extends Controller
 
         $language = Language::find($id);
         if (!$language) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['languages']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['languages']['not_found'], 'danger'),
         ]);
 
         return response()->json([
@@ -98,7 +98,7 @@ class LanguageController extends Controller
         Language::create($input);
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['languages']['created'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['languages']['created'], 'success'),
         ]);
     }
 
@@ -109,7 +109,7 @@ class LanguageController extends Controller
 
         $language = Language::find($id);
         if (!$language) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['languages']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['languages']['not_found'], 'danger'),
         ]);
 
         $rules = UtilController::rules($this->rules, $language);
@@ -120,7 +120,7 @@ class LanguageController extends Controller
         $language->update($input);
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['languages']['updated'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['languages']['updated'], 'success'),
             'language' => $language,
         ]);
     }
@@ -132,7 +132,7 @@ class LanguageController extends Controller
 
         $language = Language::find($id);
         if (!$language) return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['languages']['not_found'], 'danger'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['languages']['not_found'], 'danger'),
         ]);
 
         $language->delete();
@@ -143,7 +143,7 @@ class LanguageController extends Controller
         $total = $data['total'];
 
         return response()->json([
-            'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['languages']['deleted'], 'success'),
+            'message' => UtilController::message($cms['pages'][$user->language->abbr]['backend']['messages']['languages']['deleted'], 'success'),
             'languages' => $languages,
             'total' => $total,
         ]);

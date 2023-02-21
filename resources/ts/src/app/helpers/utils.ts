@@ -48,7 +48,7 @@ export const timeFromTimestamp = (timestamp: number) => {
 export const checkValidity = (value = '', rules: ValidationType) => {
     const validation: { [key: string]: boolean } = {};
 
-    if (rules.required) validation.required = value.trim() !== '';
+    if (rules.required) validation.required = ((typeof value === 'string') && value.trim() !== '') || typeof value === 'number';
 
     if (rules.confirm) validation.confirm = value === rules.confirm;
 
@@ -134,7 +134,7 @@ export const manageResource = async (
                 id = params[0];
                 data = params[1];
                 url = `/api/${role}/${root}/${id}?page=${page}&show=${show}&search=${search}`;
-                res = await axios.patch(url, data);
+                res = await axios.post(url, data);
                 return res.data
 
             case 'delete':
