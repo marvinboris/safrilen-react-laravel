@@ -69,7 +69,7 @@ export default function Wrapper({ children }: WrapperProps) {
     if (languages === null) getLanguages()
       .then(languages => {
         setLanguages(languages)
-        setLanguage(languages.find(language => language.abbr === localStorage.getItem('frontend_lang'))!)
+        setLanguage(languages.find(language => language.abbr === (localStorage.getItem('frontend_lang')) || process.env.VITE_DEFAULT_LANG || 'fr')!)
       })
   }, [languages, setLanguage])
 
