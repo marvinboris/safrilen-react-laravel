@@ -58,7 +58,7 @@ export default function GetQuote() {
             <div className="container">
                 <div className="font-bold text-primary text-lg md:text-3xl text-center md:text-left mb-[17px] md:mb-[5px]">{quote.title}</div>
 
-                <div className='text-sm md:text-lg text-center md:text-left mb-[30px] md:mb-[22px]'>{quote.subtitle}</div>
+                {/* <div className='text-sm md:text-lg text-center md:text-left mb-[30px] md:mb-[22px]'>{quote.subtitle}</div> */}
 
                 {message && <Alert className='mb-4' color={message.type}>{message.content}</Alert>}
 
