@@ -181,6 +181,14 @@ Route::prefix('content')->name('content.')->group(function () {
 });
 
 Route::name('frontend.')->group(function () {
+    Route::prefix('languages')->name('languages.')->group(function () { 
+        Route::get('', function () {
+            $languages = Language::all();
+
+            return $languages;
+        })->name('index');
+    });
+
     Route::prefix('publications')->name('publications.')->group(function () {
         Route::get('', 'FrontendController@publications')->name('index');
     });
