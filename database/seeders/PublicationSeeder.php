@@ -134,7 +134,7 @@ class PublicationSeeder extends Seeder
                     <li>Filtering and regulating electrical voltage so that computing devices are not damaged.</li>
                     </ul>",
                 ]),
-                'photo' => "Hee83a13857ed4203ade5c55a55119392q.webp"
+                'photo' => "show_Riello_UPS_Master-MPS_range-removebg-preview.png"
             ],
         ];
 
