@@ -18,12 +18,12 @@ class LanguageSeeder extends Seeder
             [
                 'name' => 'Français',
                 'abbr' => 'fr',
-                'flag' => 'FR'
+                'flag' => 'fr'
             ],
             // [
             //     'name' => 'English',
             //     'abbr' => 'en',
-            //     'flag' => 'GB'
+            //     'flag' => 'gb'
             // ],
         ];
 
