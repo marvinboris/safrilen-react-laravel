@@ -33,7 +33,7 @@ class ProductSeeder extends Seeder
                     The UPS batteries will provide power to your devices. The autonomy varies according to the capacity of the batteries and the power required.',
                 ]),
                 'price' => 20000,
-                'photo' => '7.png'
+                'photo' => '7.webp'
             ],
             [
                 'name' => json_encode([
@@ -55,7 +55,7 @@ class ProductSeeder extends Seeder
                     It is also equipped with a microprocessor which ensures that the electric current produced complies with the standards imposed by the network manager.",
                 ]),
                 'price' => 100000,
-                'photo' => '8.png'
+                'photo' => '8.webp'
             ],
             [
                 'name' => json_encode([
@@ -81,7 +81,7 @@ class ProductSeeder extends Seeder
                     In important places such as hospitals, military bases, airports... which cannot afford to be out of power, fixed models of generators are present.",
                 ]),
                 'price' => 5000000,
-                'photo' => 'Grupo-electrogeno-Dagartech_Industrial-insonorizado-grande_CTA.png'
+                'photo' => 'Grupo-electrogeno-Dagartech_Industrial-insonorizado-grande_CTA.webp'
             ],
             [
                 'name' => json_encode([
@@ -105,7 +105,7 @@ class ProductSeeder extends Seeder
                     </ul>",
                 ]),
                 'price' => 30000,
-                'photo' => '6.png'
+                'photo' => '6.webp'
             ],
         ];
 

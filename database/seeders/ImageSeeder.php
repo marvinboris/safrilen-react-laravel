@@ -16,19 +16,19 @@ class ImageSeeder extends Seeder
     public function run()
     {
         $images = [
-            ['photo' => "riccardo-annandale-7e2pe9wjL9M-unsplash.jpg",],
-            ['photo' => "anders-j-hxUcl0nUsIY-unsplash.jpg",],
-            ['photo' => "nuno-marques-0GbrjL3vZF4-unsplash.jpg",],
-            ['photo' => "emmanuel-ikwuegbu-_2AlIm-F6pw-unsplash.jpg",],
-            ['photo' => "alexandre-debieve-FO7JIlwjOtU-unsplash.jpg",],
-            ['photo' => "john-barkiple-l090uFWoPaI-unsplash.jpg",],
-            ['photo' => "mh-tri-TadNRJiOHB4-unsplash.jpg",],
-            ['photo' => "nicolas-thomas-3GZi6OpSDcY-unsplash.jpg",],
-            ['photo' => "hobi-industri-NLBJ2I0lNr4-unsplash.jpg",],
-            ['photo' => "roberto-sorin-ZZ3qxWFZNRg-unsplash.jpg",],
-            ['photo' => "sigmund-r6tyWx_Mm9g-unsplash.jpg",],
-            ['photo' => "thomas-kelley-xVptEZzgVfo-unsplash.jpg",],
-            ['photo' => "christopher-burns-8KfCR12oeUM-unsplash.jpg",],
+            ['photo' => "riccardo-annandale-7e2pe9wjL9M-unsplash.webp",],
+            ['photo' => "anders-j-hxUcl0nUsIY-unsplash.webp",],
+            ['photo' => "nuno-marques-0GbrjL3vZF4-unsplash.webp",],
+            ['photo' => "emmanuel-ikwuegbu-_2AlIm-F6pw-unsplash.webp",],
+            ['photo' => "alexandre-debieve-FO7JIlwjOtU-unsplash.webp",],
+            ['photo' => "john-barkiple-l090uFWoPaI-unsplash.webp",],
+            ['photo' => "mh-tri-TadNRJiOHB4-unsplash.webp",],
+            ['photo' => "nicolas-thomas-3GZi6OpSDcY-unsplash.webp",],
+            ['photo' => "hobi-industri-NLBJ2I0lNr4-unsplash.webp",],
+            ['photo' => "roberto-sorin-ZZ3qxWFZNRg-unsplash.webp",],
+            ['photo' => "sigmund-r6tyWx_Mm9g-unsplash.webp",],
+            ['photo' => "thomas-kelley-xVptEZzgVfo-unsplash.webp",],
+            ['photo' => "christopher-burns-8KfCR12oeUM-unsplash.webp",],
         ];
 
         foreach ($images as $image) {

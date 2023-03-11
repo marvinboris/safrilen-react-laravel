@@ -29,7 +29,7 @@ interface PageParams {
 export const Head = ({ link, title, description }: PageParams) => <HeadProvider>
     <Title>{title}</Title>
     <Meta name="description" content={description} />
-    <Link rel="canonical" href={link} />
+    <Link rel="canonical" href={location.origin + link} />
 
     <Meta property='og:title' content={title} />
     <Meta property="og:description" content={description} />

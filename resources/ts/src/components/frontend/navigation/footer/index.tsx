@@ -127,7 +127,7 @@ export default function Footer() {
             </div>
         </div>
 
-        <div className="py-8 bg-yellow">
+        <div className="py-8 bg-yellow text-secondary-900">
             <div className="container space-y-3 lg:space-y-0 lg:flex items-center">
                 <div className='flex items-center justify-center space-x-3'>
                     <span>&copy; {new Date().getFullYear()} <span className='font-bold'>{app_name}</span>. {bottom.all_rights} <span className='font-bold text-primary'>{company_name}</span>.</span>

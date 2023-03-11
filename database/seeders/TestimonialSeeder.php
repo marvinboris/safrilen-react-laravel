@@ -21,7 +21,7 @@ class TestimonialSeeder extends Seeder
                     'fr' => 'Société Nationale de Raffinerie',
                     'en' => 'National Refinery Company',
                 ]),
-                'photo' => 'logo-sonara.png',
+                'photo' => 'logo-sonara.webp',
                 'link' => 'https://sonara-cm.cm',
             ],
             [
@@ -30,7 +30,7 @@ class TestimonialSeeder extends Seeder
                     'fr' => 'Agence Nationale des TIC',
                     'en' => 'National ICT Agency',
                 ]),
-                'photo' => 'logo-antic.png',
+                'photo' => 'logo-antic.webp',
                 'link' => 'https://antic.cm',
             ],
         ];

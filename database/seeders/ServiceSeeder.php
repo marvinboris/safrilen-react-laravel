@@ -24,7 +24,7 @@ class ServiceSeeder extends Seeder
                     'fr' => ".",
                     'en' => ".",
                 ]),
-                'photo' => 'WhatsApp Image 2023-01-16 at 12.22.21 (2).jpeg',
+                'photo' => 'WhatsApp Image 2023-01-16 at 12.22.21 (2).webp',
             ],
             [
                 'title' => json_encode([
@@ -37,7 +37,7 @@ class ServiceSeeder extends Seeder
                     'en' => "After placing an order with our company, you benefit from a service including delivery, assembly, connection and commissioning of the equipment. <br />
                     Our technical team will contact you to agree on a delivery and installation date.",
                 ]),
-                'photo' => 'WhatsApp Image 2023-01-16 at 12.22.21.jpeg',
+                'photo' => 'WhatsApp Image 2023-01-16 at 12.22.21.webp',
             ],
             [
                 'title' => json_encode([
@@ -54,7 +54,7 @@ class ServiceSeeder extends Seeder
                     If, in the past, it has been given the sole purpose of ensuring the proper functioning of production tools, its objectives are much more numerous and complex.<br />
                     Indeed, the challenges of industrial maintenance are at the border between financial, safety and environmental issues related to the recycling of machines.",
                 ]),
-                'photo' => 'BeYourBold_Blog_Engineering.jpg',
+                'photo' => 'BeYourBold_Blog_Engineering.webp',
             ],
             [
                 'title' => json_encode([
@@ -69,7 +69,7 @@ class ServiceSeeder extends Seeder
                     are available to our partners to provide tools and training to
                     their teams, necessary for the proper functioning of the equipment.",
                 ]),
-                'photo' => 'young-man-woman-sitting-cafe.jpg',
+                'photo' => 'young-man-woman-sitting-cafe.webp',
             ],
         ];
 
